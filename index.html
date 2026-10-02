@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +7,7 @@
 <title>SDF Private Limited</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -20,12 +20,13 @@ html{
 }
 
 body{
-    background:#f4f8f5;
-    color:#14251b;
+    background:#f5f8f6;
+    color:#17251c;
     overflow-x:hidden;
 }
 
-/* HEADER */
+
+/* ================= HEADER ================= */
 
 header{
     position:fixed;
@@ -34,8 +35,10 @@ header{
     width:100%;
     height:72px;
     z-index:1000;
-    background:rgba(255,255,255,.90);
+
+    background:rgba(255,255,255,.92);
     backdrop-filter:blur(15px);
+
     border-bottom:1px solid rgba(0,0,0,.08);
 }
 
@@ -43,7 +46,9 @@ header{
     max-width:1200px;
     height:100%;
     margin:auto;
+
     padding:0 20px;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -53,21 +58,30 @@ header{
     display:flex;
     align-items:center;
     gap:10px;
-    font-weight:800;
+
     font-size:19px;
+    font-weight:800;
+
     color:#126b3a;
 }
 
 .logo-box{
-    width:42px;
-    height:42px;
+    width:43px;
+    height:43px;
+
     border-radius:12px;
-    background:linear-gradient(145deg,#1b8b4d,#07572d);
+
+    background:
+    linear-gradient(145deg,#1b8b4d,#07572d);
+
     display:flex;
     align-items:center;
     justify-content:center;
+
     color:white;
-    box-shadow:8px 8px 18px rgba(0,80,40,.22);
+
+    box-shadow:
+    7px 8px 18px rgba(0,80,40,.22);
 }
 
 .nav-links{
@@ -80,6 +94,7 @@ header{
     text-decoration:none;
     color:#26372d;
     font-weight:600;
+
     transition:.3s;
 }
 
@@ -89,54 +104,86 @@ header{
 
 .menu-btn{
     display:none;
+
     border:0;
     background:none;
+
     font-size:28px;
+    cursor:pointer;
 }
 
 
-/* HERO */
+/* ================= MAIN ================= */
+
+main{
+    padding-top:72px;
+}
+
+
+/* ================= HERO ================= */
 
 .hero{
-    min-height:100vh;
-    padding:120px 20px 70px;
+    min-height:390px;
+
     display:flex;
     align-items:center;
-    position:relative;
-    overflow:hidden;
+    justify-content:center;
+
+    text-align:center;
+
+    padding:70px 20px;
 
     background:
-    radial-gradient(circle at 10% 20%,rgba(52,180,104,.18),transparent 30%),
-    radial-gradient(circle at 90% 80%,rgba(255,196,70,.18),transparent 30%),
-    linear-gradient(135deg,#f7fff9,#edf8f0);
+    radial-gradient(
+        circle at 20% 20%,
+        rgba(41,170,95,.14),
+        transparent 30%
+    ),
+
+    radial-gradient(
+        circle at 80% 80%,
+        rgba(240,190,50,.12),
+        transparent 30%
+    ),
+
+    linear-gradient(
+        135deg,
+        #ffffff,
+        #eef8f1
+    );
 }
 
-.hero-container{
-    max-width:1200px;
-    width:100%;
-    margin:auto;
-
-    display:grid;
-    grid-template-columns:1.05fr .95fr;
-    gap:35px;
-    align-items:center;
+.hero-content{
+    max-width:850px;
 }
 
-.badge{
+.hero-badge{
     display:inline-block;
-    padding:9px 17px;
+
+    padding:9px 18px;
+
     border-radius:30px;
-    background:#e0f6e9;
+
+    background:#e2f6e9;
+
     color:#087239;
+
+    font-size:13px;
+
     font-weight:700;
+
     margin-bottom:20px;
 }
 
 .hero h1{
-    font-size:clamp(42px,6vw,76px);
-    line-height:1;
-    margin-bottom:20px;
+    font-size:
+    clamp(40px,7vw,72px);
+
+    line-height:1.05;
+
     color:#103d25;
+
+    margin-bottom:18px;
 }
 
 .hero h1 span{
@@ -144,201 +191,154 @@ header{
 }
 
 .hero p{
-    font-size:18px;
+    max-width:680px;
+
+    margin:auto;
+
+    color:#5d6c63;
+
+    font-size:17px;
+
     line-height:1.8;
-    max-width:620px;
-    color:#536359;
-}
-
-.hero-buttons{
-    margin-top:30px;
-    display:flex;
-    gap:15px;
-    flex-wrap:wrap;
-}
-
-.btn{
-    padding:14px 24px;
-    border-radius:14px;
-    text-decoration:none;
-    font-weight:700;
-    display:inline-block;
-    transition:.3s;
-    border:none;
-    cursor:pointer;
-}
-
-.btn-primary{
-    color:white;
-    background:linear-gradient(145deg,#1c9954,#096332);
-    box-shadow:0 12px 25px rgba(10,112,57,.25);
-}
-
-.btn-primary:hover{
-    transform:translateY(-4px);
-}
-
-.btn-secondary{
-    color:#126b3a;
-    background:white;
-    border:1px solid #dce9df;
 }
 
 
-/* 3D CUBE */
+/* ================= CERTIFICATE ================= */
 
-.scene{
-    height:430px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    perspective:1000px;
+.certificate-section{
+    background:#ffffff;
+
+    padding:30px 0;
+
+    overflow:hidden;
+
+    border-bottom:1px solid #e5ebe7;
 }
 
-.cube{
-    width:250px;
-    height:250px;
-    position:relative;
-    transform-style:preserve-3d;
-    animation:rotateCube 12s infinite linear;
-}
-
-.face{
-    position:absolute;
-    width:250px;
-    height:250px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
+.certificate-title{
     text-align:center;
 
-    border-radius:25px;
+    margin-bottom:20px;
 
-    background:
-    linear-gradient(145deg,#1b9552,#07582f);
+    color:#126b3a;
 
-    color:white;
+    font-size:14px;
 
-    border:2px solid rgba(255,255,255,.3);
+    font-weight:800;
 
-    box-shadow:
-    inset 0 0 40px rgba(255,255,255,.08);
+    letter-spacing:1px;
 }
 
-.face strong{
-    font-size:28px;
-}
-
-.front{
-    transform:translateZ(125px);
-}
-
-.back{
-    transform:rotateY(180deg) translateZ(125px);
-}
-
-.right{
-    transform:rotateY(90deg) translateZ(125px);
-}
-
-.left{
-    transform:rotateY(-90deg) translateZ(125px);
-}
-
-.top{
-    transform:rotateX(90deg) translateZ(125px);
-}
-
-.bottom{
-    transform:rotateX(-90deg) translateZ(125px);
-}
-
-@keyframes rotateCube{
-
-    0%{
-        transform:rotateX(-10deg) rotateY(0deg);
-    }
-
-    50%{
-        transform:rotateX(10deg) rotateY(180deg);
-    }
-
-    100%{
-        transform:rotateX(-10deg) rotateY(360deg);
-    }
-
-}
-
-
-/* CERTIFICATE BOX */
-
-.certificate-box{
-    margin-top:35px;
+.certificate-track{
+    width:max-content;
 
     display:flex;
-    flex-wrap:wrap;
-    gap:12px;
+
+    gap:18px;
+
+    animation:
+    certificateMove 22s linear infinite;
+}
+
+.certificate-row{
+    display:flex;
+
+    gap:18px;
 }
 
 .certificate{
-    min-width:145px;
-    padding:15px 17px;
+    width:280px;
+
+    min-height:85px;
+
+    padding:14px 18px;
+
+    border-radius:18px;
+
+    background:
+    linear-gradient(
+        145deg,
+        #ffffff,
+        #f1f7f3
+    );
+
+    border:1px solid #dce8df;
 
     display:flex;
+
     align-items:center;
-    gap:12px;
 
-    background:rgba(255,255,255,.88);
-
-    border:1px solid #dfeae2;
-
-    border-radius:17px;
+    gap:14px;
 
     box-shadow:
-    8px 10px 25px rgba(0,60,30,.08);
+    0 8px 25px rgba(20,80,45,.08);
 
-    transition:.3s;
+    flex-shrink:0;
 }
 
-.certificate:hover{
-    transform:translateY(-5px);
-}
-
-.cert-logo{
-    width:42px;
-    height:42px;
+.cert-icon{
+    width:52px;
+    height:52px;
 
     flex-shrink:0;
 
-    border-radius:12px;
+    border-radius:15px;
 
-    background:#e5f6eb;
+    background:
+    linear-gradient(
+        145deg,
+        #e5f7eb,
+        #cdebd7
+    );
 
     display:flex;
+
     align-items:center;
     justify-content:center;
 
-    font-size:20px;
+    font-size:25px;
 }
 
-.certificate h4{
-    font-size:14px;
-    color:#0b6635;
-    margin-bottom:4px;
+.cert-info h3{
+    color:#126b3a;
+
+    font-size:15px;
+
+    margin-bottom:5px;
 }
 
-.certificate p{
+.cert-info p{
+    color:#5f6b63;
+
     font-size:12px;
-    color:#58645c;
-    line-height:1.4;
+
+    word-break:break-all;
+}
+
+@keyframes certificateMove{
+
+    0%{
+        transform:translateX(0);
+    }
+
+    100%{
+        transform:translateX(-50%);
+    }
+
 }
 
 
-/* SECTION */
+/* ================= PRODUCTS ================= */
 
-section{
-    padding:90px 20px;
+.products{
+    padding:80px 20px;
+
+    background:
+    linear-gradient(
+        180deg,
+        #f5f8f6,
+        #ffffff
+    );
 }
 
 .container{
@@ -348,260 +348,322 @@ section{
 
 .section-title{
     text-align:center;
-    margin-bottom:50px;
+
+    margin-bottom:45px;
 }
 
-.section-title span{
-    color:#148247;
-    font-weight:700;
+.section-title small{
+    color:#158046;
+
+    font-weight:800;
+
+    letter-spacing:1px;
 }
 
 .section-title h2{
     font-size:40px;
+
     margin:10px 0;
+
+    color:#153a24;
 }
 
 .section-title p{
-    color:#66736a;
-}
-
-
-/* ABOUT */
-
-.grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-}
-
-.card{
-    background:rgba(255,255,255,.90);
-
-    border:1px solid #e0e9e3;
-
-    border-radius:25px;
-
-    padding:30px;
-
-    box-shadow:
-    12px 12px 30px rgba(28,75,46,.08),
-    -8px -8px 25px rgba(255,255,255,.9);
-
-    transition:.4s;
-
-    transform-style:preserve-3d;
-}
-
-.card:hover{
-    transform:
-    translateY(-10px)
-    rotateX(3deg)
-    rotateY(-3deg);
-
-    box-shadow:
-    15px 20px 40px rgba(20,90,50,.14);
-}
-
-.icon{
-    width:60px;
-    height:60px;
-
-    border-radius:18px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    font-size:28px;
-
-    background:#e5f6eb;
-
-    margin-bottom:20px;
-}
-
-.card h3{
-    margin-bottom:12px;
-    font-size:21px;
-}
-
-.card p{
-    color:#647068;
-    line-height:1.7;
-}
-
-
-/* MOTIVATION */
-
-.motivation{
-    background:
-    linear-gradient(135deg,#0c6636,#063b22);
-
-    color:white;
-
-    position:relative;
-    overflow:hidden;
-}
-
-.motivation .section-title p{
-    color:#c9ded0;
-}
-
-.quote{
-    max-width:850px;
-    margin:auto;
-
-    text-align:center;
-
-    padding:45px;
-
-    border:1px solid rgba(255,255,255,.18);
-
-    border-radius:30px;
-
-    background:rgba(255,255,255,.07);
-
-    backdrop-filter:blur(10px);
-
-    box-shadow:
-    0 25px 70px rgba(0,0,0,.2);
-}
-
-.quote h2{
-    font-size:clamp(28px,4vw,48px);
-    line-height:1.3;
-    margin-bottom:20px;
-}
-
-.quote p{
-    color:#d7e8dd;
-    line-height:1.8;
-}
-
-
-/* PRODUCTS */
-
-.product-card{
-    overflow:hidden;
-    padding:0;
-}
-
-.product-img{
-    height:200px;
-
-    background:
-    linear-gradient(145deg,#dff3e5,#f7faf7);
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    font-size:65px;
-}
-
-.product-content{
-    padding:25px;
-}
-
-.product-content h3{
-    margin:10px 0;
-}
-
-.product-content p{
-    margin-bottom:15px;
-
-    color:#68746c;
-
-    line-height:1.6;
-}
-
-.tag{
-    display:inline-block;
-
-    padding:7px 12px;
-
-    background:#e7f7ed;
-
-    color:#147540;
-
-    border-radius:20px;
-
-    font-size:13px;
-
-    font-weight:700;
-}
-
-
-/* CONTACT */
-
-.contact-box{
-    background:white;
-
-    border-radius:30px;
-
-    padding:45px;
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:40px;
-
-    box-shadow:
-    0 20px 60px rgba(0,0,0,.07);
-}
-
-.contact-info h2{
-    font-size:35px;
-    margin-bottom:15px;
-}
-
-.contact-info p{
-    color:#657168;
-    line-height:1.8;
-}
-
-.contact-list{
-    margin-top:25px;
-    display:grid;
-    gap:15px;
-}
-
-.contact-item{
-    padding:15px;
-
-    background:#f2f8f4;
-
-    border-radius:15px;
-}
-
-.contact-form{
-    display:grid;
-    gap:15px;
-}
-
-.contact-form input,
-.contact-form textarea{
-
-    width:100%;
-
-    padding:15px;
-
-    border:1px solid #dfe8e2;
-
-    border-radius:13px;
-
-    outline:none;
+    color:#69766e;
 
     font-size:15px;
 }
 
-.contact-form textarea{
-    height:130px;
-    resize:none;
+
+/* PRODUCT GRID */
+
+.product-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:25px;
 }
 
 
-/* FOOTER */
+/* PRODUCT CARD */
+
+.product-card{
+    background:white;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    border:1px solid #e1e9e3;
+
+    box-shadow:
+    0 12px 35px rgba(24,75,43,.08);
+
+    transition:
+    .4s;
+
+}
+
+.product-card:hover{
+    transform:
+    translateY(-8px);
+
+    box-shadow:
+    0 22px 45px rgba(24,75,43,.15);
+}
+
+
+/* PRODUCT PHOTO */
+
+.product-photo{
+    width:100%;
+
+    height:230px;
+
+    background:
+    linear-gradient(
+        145deg,
+        #edf7f0,
+        #ffffff
+    );
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    overflow:hidden;
+}
+
+.product-photo img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.5s;
+}
+
+.product-card:hover
+.product-photo img{
+    transform:scale(1.07);
+}
+
+
+/* PRODUCT TEXT */
+
+.product-info{
+    padding:20px;
+}
+
+.product-category{
+    display:inline-block;
+
+    padding:6px 11px;
+
+    border-radius:20px;
+
+    background:#e5f6eb;
+
+    color:#13743e;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    margin-bottom:10px;
+}
+
+.product-info h3{
+    color:#173c25;
+
+    font-size:21px;
+
+    margin-bottom:8px;
+}
+
+.product-info p{
+    color:#69756d;
+
+    font-size:14px;
+
+    line-height:1.6;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact{
+    padding:80px 20px;
+
+    background:#ffffff;
+}
+
+.contact-box{
+    max-width:900px;
+
+    margin:auto;
+
+    padding:45px;
+
+    border-radius:28px;
+
+    background:
+    linear-gradient(
+        145deg,
+        #f7fcf8,
+        #ffffff
+    );
+
+    border:1px solid #dfe9e2;
+
+    box-shadow:
+    0 18px 50px rgba(20,70,40,.08);
+
+    text-align:center;
+}
+
+.contact-box h2{
+    font-size:38px;
+
+    color:#153c25;
+
+    margin-bottom:12px;
+}
+
+.contact-box > p{
+    color:#66736b;
+
+    line-height:1.7;
+
+    margin-bottom:30px;
+}
+
+.contact-items{
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:15px;
+}
+
+.contact-item{
+    padding:20px 15px;
+
+    background:white;
+
+    border:1px solid #e0e9e3;
+
+    border-radius:17px;
+
+    transition:.3s;
+}
+
+.contact-item:hover{
+    transform:translateY(-5px);
+
+    border-color:#a9d4b7;
+}
+
+.contact-icon{
+    font-size:27px;
+
+    margin-bottom:10px;
+}
+
+.contact-item h4{
+    color:#137640;
+
+    margin-bottom:6px;
+
+    font-size:14px;
+}
+
+.contact-item a,
+.contact-item span{
+    color:#59665e;
+
+    font-size:13px;
+
+    text-decoration:none;
+
+    word-break:break-word;
+}
+
+
+/* ================= SOCIAL ================= */
+
+.social-section{
+    padding:65px 20px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #eef8f1,
+        #f8fbf9
+    );
+
+    text-align:center;
+}
+
+.social-section h2{
+    font-size:32px;
+
+    color:#153c25;
+
+    margin-bottom:10px;
+}
+
+.social-section p{
+    color:#69766e;
+
+    margin-bottom:25px;
+}
+
+.social-buttons{
+    display:flex;
+
+    justify-content:center;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+}
+
+.social-btn{
+    padding:13px 22px;
+
+    border-radius:13px;
+
+    background:white;
+
+    color:#126b3a;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    border:1px solid #dbe8df;
+
+    box-shadow:
+    0 7px 18px rgba(20,70,40,.07);
+
+    transition:.3s;
+}
+
+.social-btn:hover{
+    transform:translateY(-4px);
+
+    background:#eaf7ee;
+}
+
+
+/* ================= FOOTER ================= */
 
 footer{
     background:#062d1b;
@@ -620,14 +682,31 @@ footer{
 
     justify-content:space-between;
 
-    gap:30px;
+    align-items:center;
+
+    gap:25px;
 
     flex-wrap:wrap;
 }
 
-.footer-content p{
+.footer-brand h2{
+    font-size:22px;
+}
+
+.footer-brand p{
     color:#b7cfc0;
-    margin-top:10px;
+
+    margin-top:8px;
+
+    font-size:14px;
+}
+
+.footer-right{
+    color:#b7cfc0;
+
+    font-size:14px;
+
+    text-align:right;
 }
 
 .footer-bottom{
@@ -637,40 +716,27 @@ footer{
 
     padding-top:20px;
 
-    border-top:1px solid rgba(255,255,255,.1);
+    border-top:
+    1px solid
+    rgba(255,255,255,.12);
 
     color:#a8c0b2;
 
-    font-size:14px;
+    font-size:13px;
+
+    text-align:center;
 }
 
 
-/* ANIMATION */
-
-.reveal{
-    opacity:0;
-
-    transform:translateY(40px);
-
-    transition:1s;
-}
-
-.reveal.active{
-    opacity:1;
-
-    transform:translateY(0);
-}
-
-
-/* MOBILE */
+/* ================= MOBILE ================= */
 
 @media(max-width:850px){
 
     .nav-links{
-
         position:absolute;
 
         top:72px;
+
         left:0;
 
         width:100%;
@@ -695,109 +761,83 @@ footer{
         display:block;
     }
 
-    .hero-container{
-        grid-template-columns:1fr;
-        text-align:center;
+    .product-grid{
+        grid-template-columns:
+        repeat(2,1fr);
     }
 
-    .hero p{
-        margin:auto;
-    }
-
-    .hero-buttons{
-        justify-content:center;
-    }
-
-    .scene{
-        height:330px;
-        transform:scale(.72);
-    }
-
-    .certificate-box{
-        justify-content:center;
-    }
-
-    .grid{
-        grid-template-columns:1fr;
+    .contact-items{
+        grid-template-columns:
+        1fr;
     }
 
     .contact-box{
-        grid-template-columns:1fr;
-        padding:30px;
+        padding:30px 20px;
     }
 
+    .footer-right{
+        text-align:left;
+    }
 }
 
 
-@media(max-width:500px){
+@media(max-width:550px){
 
-    section{
-        padding:70px 15px;
+    .logo{
+        font-size:15px;
+    }
+
+    .logo-box{
+        width:38px;
+        height:38px;
     }
 
     .hero{
-        padding-left:15px;
-        padding-right:15px;
+        min-height:340px;
+
+        padding:
+        55px 18px;
     }
 
     .hero h1{
         font-size:43px;
     }
 
+    .hero p{
+        font-size:15px;
+    }
+
+    .product-grid{
+        grid-template-columns:1fr;
+    }
+
     .section-title h2{
-        font-size:31px;
+        font-size:32px;
     }
 
-    .cube{
-        width:210px;
-        height:210px;
-    }
-
-    .face{
-        width:210px;
-        height:210px;
-    }
-
-    .front{
-        transform:translateZ(105px);
-    }
-
-    .back{
-        transform:rotateY(180deg) translateZ(105px);
-    }
-
-    .right{
-        transform:rotateY(90deg) translateZ(105px);
-    }
-
-    .left{
-        transform:rotateY(-90deg) translateZ(105px);
-    }
-
-    .top{
-        transform:rotateX(90deg) translateZ(105px);
-    }
-
-    .bottom{
-        transform:rotateX(-90deg) translateZ(105px);
+    .product-photo{
+        height:250px;
     }
 
     .certificate{
-        width:100%;
-        max-width:330px;
+        width:260px;
     }
 
 }
 
 
-/* PRODUCT IMAGE ICON ANIMATION */
+/* ================= REDUCE MOTION ================= */
 
-.product-card:hover .product-img{
-    transform:scale(1.04);
-}
+@media(prefers-reduced-motion:reduce){
 
-.product-img{
-    transition:.4s;
+    .certificate-track{
+        animation:none;
+    }
+
+    *{
+        scroll-behavior:auto;
+    }
+
 }
 
 </style>
@@ -807,7 +847,7 @@ footer{
 <body>
 
 
-<!-- HEADER -->
+<!-- ================= HEADER ================= -->
 
 <header>
 
@@ -824,19 +864,21 @@ SDF
 </div>
 
 
-<button class="menu-btn" onclick="toggleMenu()">
+<button
+class="menu-btn"
+onclick="toggleMenu()">
+
 ☰
+
 </button>
 
 
-<ul class="nav-links" id="navLinks">
+<ul
+class="nav-links"
+id="navLinks">
 
 <li>
 <a href="#home">Home</a>
-</li>
-
-<li>
-<a href="#about">About</a>
 </li>
 
 <li>
@@ -855,64 +897,65 @@ SDF
 
 
 
-<!-- HERO -->
-
-<section class="hero" id="home">
-
-<div class="hero-container">
+<main>
 
 
-<div class="hero-text reveal">
+<!-- ================= HERO ================= -->
 
-<span class="badge">
-PRIVATE LIMITED BUSINESS
+<section
+class="hero"
+id="home">
+
+<div class="hero-content">
+
+<span class="hero-badge">
+SDF PRIVATE LIMITED
 </span>
 
-
 <h1>
-
-SDF <span>PRIVATE</span><br>
-LIMITED
-
+Quality <span>•</span>
+Trust <span>•</span>
+Growth
 </h1>
 
-
 <p>
-
-Building a growing business with a focus on
-quality products, customer trust and continuous
-improvement.
-
+Delivering quality food and dry food products
+with a focus on trust, consistency and customer
+satisfaction.
 </p>
-
-
-<div class="hero-buttons">
-
-<a href="#products" class="btn btn-primary">
-Explore Products →
-</a>
-
-<a href="#about" class="btn btn-secondary">
-About Business
-</a>
 
 </div>
 
+</section>
 
-<!-- CERTIFICATES -->
 
-<div class="certificate-box">
+
+<!-- ================= CERTIFICATES ================= -->
+
+<section class="certificate-section">
+
+<div class="certificate-title">
+OUR BUSINESS CERTIFICATIONS
+</div>
+
+
+<div class="certificate-track">
+
+
+<!-- FIRST SET -->
+
+<div class="certificate-row">
 
 
 <div class="certificate">
 
-<div class="cert-logo">
+<div class="cert-icon">
 🧾
 </div>
 
-<div>
+<div class="cert-info">
 
-<h4>GST</h4>
+<h3>GST REGISTERED</h3>
 
 <p>
 19ABPCS9686K1Z1
@@ -923,15 +966,16 @@ About Business
 </div>
 
 
+
 <div class="certificate">
 
-<div class="cert-logo">
-🍃
+<div class="cert-icon">
+🌿
 </div>
 
-<div>
+<div class="cert-info">
 
-<h4>FSSAI</h4>
+<h3>FSSAI</h3>
 
 <p>
 302202241099831
@@ -942,15 +986,84 @@ About Business
 </div>
 
 
+
 <div class="certificate">
 
-<div class="cert-logo">
+<div class="cert-icon">
 🏆
 </div>
 
-<div>
+<div class="cert-info">
 
-<h4>ISO</h4>
+<h3>ISO CERTIFICATE</h3>
+
+<p>
+ISO Certified
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+
+<!-- DUPLICATE FOR SMOOTH LOOP -->
+
+<div class="certificate-row">
+
+
+<div class="certificate">
+
+<div class="cert-icon">
+🧾
+</div>
+
+<div class="cert-info">
+
+<h3>GST REGISTERED</h3>
+
+<p>
+19ABPCS9686K1Z1
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="certificate">
+
+<div class="cert-icon">
+🌿
+</div>
+
+<div class="cert-info">
+
+<h3>FSSAI</h3>
+
+<p>
+302202241099831
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="certificate">
+
+<div class="cert-icon">
+🏆
+</div>
+
+<div class="cert-info">
+
+<h3>ISO CERTIFICATE</h3>
 
 <p>
 ISO Certified
@@ -965,263 +1078,58 @@ ISO Certified
 
 </div>
 
-
-
-<!-- 3D CUBE -->
-
-<div class="scene reveal">
-
-<div class="cube">
-
-<div class="face front">
-
-<strong>
-SDF<br>
-PRIVATE<br>
-LIMITED
-</strong>
-
-</div>
-
-
-<div class="face back">
-
-<strong>
-QUALITY
-</strong>
-
-</div>
-
-
-<div class="face right">
-
-<strong>
-TRUST
-</strong>
-
-</div>
-
-
-<div class="face left">
-
-<strong>
-GROWTH
-</strong>
-
-</div>
-
-
-<div class="face top">
-
-<strong>
-SDF
-</strong>
-
-</div>
-
-
-<div class="face bottom">
-
-<strong>
-2026
-</strong>
-
-</div>
-
-</div>
-
-</div>
-
-
-</div>
-
 </section>
 
 
 
-<!-- ABOUT -->
+<!-- ================= PRODUCTS ================= -->
 
-<section id="about">
-
-<div class="container">
-
-
-<div class="section-title reveal">
-
-<span>
-ABOUT US
-</span>
-
-<h2>
-Our Business
-</h2>
-
-<p>
-Focused on building a trusted and growing business.
-</p>
-
-</div>
-
-
-<div class="grid">
-
-
-<div class="card reveal">
-
-<div class="icon">
-🏢
-</div>
-
-<h3>
-Who We Are
-</h3>
-
-<p>
-SDF Private Limited is a growing business
-focused on providing useful and quality
-products to customers.
-</p>
-
-</div>
-
-
-
-<div class="card reveal">
-
-<div class="icon">
-🎯
-</div>
-
-<h3>
-Our Mission
-</h3>
-
-<p>
-To build a reliable business through
-quality products, responsible service
-and customer satisfaction.
-</p>
-
-</div>
-
-
-
-<div class="card reveal">
-
-<div class="icon">
-🌱
-</div>
-
-<h3>
-Our Vision
-</h3>
-
-<p>
-To grow step by step and create a
-recognizable business brand based on
-trust and consistency.
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- MOTIVATION -->
-
-<section class="motivation">
+<section
+class="products"
+id="products">
 
 <div class="container">
 
 
-<div class="section-title reveal">
+<div class="section-title">
 
-<span style="color:#8de2af;">
-OUR MOTIVATION
-</span>
-
-<h2>
-Build Today. Grow Tomorrow.
-</h2>
-
-<p>
-Every successful business begins with a small step.
-</p>
-
-</div>
-
-
-<div class="quote reveal">
-
-<h2>
-
-“Quality is our commitment.<br>
-Trust is our foundation.<br>
-Growth is our journey.”
-
-</h2>
-
-
-<p>
-
-We believe that consistent effort,
-honest business practices and customer
-trust can create a stronger future.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- PRODUCTS -->
-
-<section id="products">
-
-<div class="container">
-
-
-<div class="section-title reveal">
-
-<span>
+<small>
 OUR PRODUCTS
-</span>
+</small>
 
 <h2>
 Available Products
 </h2>
 
 <p>
-Explore our food and dry food product categories.
+Explore our food and dry food products.
 </p>
 
 </div>
 
 
-<div class="grid">
+<div class="product-grid">
 
 
 <!-- CHIA SEED -->
 
-<div class="card product-card reveal">
+<div class="product-card">
 
-<div class="product-img">
-🌱
+<div class="product-photo">
+
+<!-- এখানে Chia Seed image URL বসাও -->
+
+<img
+src="YOUR_CHIA_SEED_IMAGE_URL"
+alt="Chia Seed"
+onerror="this.style.display='none'"
+>
+
 </div>
 
-<div class="product-content">
+<div class="product-info">
 
-<span class="tag">
+<span class="product-category">
 DRY FOOD
 </span>
 
@@ -1230,8 +1138,8 @@ Chia Seed
 </h3>
 
 <p>
-Quality chia seeds suitable for
-everyday food and healthy lifestyle.
+Quality chia seeds for everyday food
+and healthy lifestyle.
 </p>
 
 </div>
@@ -1242,15 +1150,21 @@ everyday food and healthy lifestyle.
 
 <!-- GHEE -->
 
-<div class="card product-card reveal">
+<div class="product-card">
 
-<div class="product-img">
-🫙
+<div class="product-photo">
+
+<img
+src="YOUR_GHEE_IMAGE_URL"
+alt="Ghee"
+onerror="this.style.display='none'"
+>
+
 </div>
 
-<div class="product-content">
+<div class="product-info">
 
-<span class="tag">
+<span class="product-category">
 FOOD
 </span>
 
@@ -1259,7 +1173,7 @@ Ghee
 </h3>
 
 <p>
-Premium quality ghee for everyday
+Quality ghee suitable for everyday
 cooking and food preparation.
 </p>
 
@@ -1271,15 +1185,21 @@ cooking and food preparation.
 
 <!-- HONEY -->
 
-<div class="card product-card reveal">
+<div class="product-card">
 
-<div class="product-img">
-🍯
+<div class="product-photo">
+
+<img
+src="YOUR_HONEY_IMAGE_URL"
+alt="Honey"
+onerror="this.style.display='none'"
+>
+
 </div>
 
-<div class="product-content">
+<div class="product-info">
 
-<span class="tag">
+<span class="product-category">
 FOOD
 </span>
 
@@ -1298,17 +1218,23 @@ food and beverage use.
 
 
 
-<!-- NUTS -->
+<!-- HONEY NUTS -->
 
-<div class="card product-card reveal">
+<div class="product-card">
 
-<div class="product-img">
-🥜
+<div class="product-photo">
+
+<img
+src="YOUR_HONEY_NUTS_IMAGE_URL"
+alt="Honey Nuts"
+onerror="this.style.display='none'"
+>
+
 </div>
 
-<div class="product-content">
+<div class="product-info">
 
-<span class="tag">
+<span class="product-category">
 DRY FOOD
 </span>
 
@@ -1318,7 +1244,7 @@ Honey Nuts
 
 <p>
 A delicious combination of nuts
-and honey-based flavour.
+and honey flavour.
 </p>
 
 </div>
@@ -1329,15 +1255,21 @@ and honey-based flavour.
 
 <!-- PICKLE -->
 
-<div class="card product-card reveal">
+<div class="product-card">
 
-<div class="product-img">
-🥒
+<div class="product-photo">
+
+<img
+src="YOUR_PICKLE_IMAGE_URL"
+alt="Pickle"
+onerror="this.style.display='none'"
+>
+
 </div>
 
-<div class="product-content">
+<div class="product-info">
 
-<span class="tag">
+<span class="product-category">
 FOOD
 </span>
 
@@ -1346,8 +1278,8 @@ Pickle
 </h3>
 
 <p>
-Flavourful pickle products prepared
-for everyday meals.
+Flavourful pickle products for
+everyday meals.
 </p>
 
 </div>
@@ -1358,15 +1290,21 @@ for everyday meals.
 
 <!-- OTHER -->
 
-<div class="card product-card reveal">
+<div class="product-card">
 
-<div class="product-img">
-🛒
+<div class="product-photo">
+
+<img
+src="YOUR_OTHER_PRODUCT_IMAGE_URL"
+alt="Other Products"
+onerror="this.style.display='none'"
+>
+
 </div>
 
-<div class="product-content">
+<div class="product-info">
 
-<span class="tag">
+<span class="product-category">
 OTHER
 </span>
 
@@ -1392,107 +1330,86 @@ and daily-use products.
 
 
 
-<!-- CONTACT -->
+<!-- ================= CONTACT ================= -->
 
-<section id="contact">
+<section
+class="contact"
+id="contact">
 
 <div class="container">
 
-
-<div class="contact-box reveal">
-
-
-<div class="contact-info">
+<div class="contact-box">
 
 <h2>
-Let's Connect
+Contact Us
 </h2>
 
 <p>
-
 For product enquiries, business enquiries
-or general information, please contact us.
-
+or general information, feel free to contact us.
 </p>
 
 
-<div class="contact-list">
+<div class="contact-items">
 
 
 <div class="contact-item">
 
-📧 <strong>Email</strong><br>
+<div class="contact-icon">
+📧
+</div>
 
+<h4>
+EMAIL
+</h4>
+
+<a href="mailto:privatelimitedsdf@gmail.com">
 privatelimitedsdf@gmail.com
+</a>
 
 </div>
+
 
 
 <div class="contact-item">
 
-🌐 <strong>Website</strong><br>
+<div class="contact-icon">
+🌐
+</div>
 
-SDF Private Limited
+<h4>
+WEBSITE
+</h4>
+
+<a href="https://sdfprivatelimited.com"
+target="_blank">
+
+sdfprivatelimited.com
+
+</a>
 
 </div>
+
 
 
 <div class="contact-item">
 
-📱 <strong>Social Media</strong><br>
+<div class="contact-icon">
+📞
+</div>
 
-Instagram • Facebook • YouTube
+<h4>
+BUSINESS ENQUIRY
+</h4>
+
+<span>
+Contact us for details
+</span>
 
 </div>
 
 
 </div>
-
-</div>
-
-
-
-<form class="contact-form"
-onsubmit="sendMessage(event)">
-
-
-<input
-type="text"
-placeholder="Your Name"
-required
->
-
-
-<input
-type="email"
-placeholder="Your Email"
-required
->
-
-
-<input
-type="text"
-placeholder="Subject"
-required
->
-
-
-<textarea
-placeholder="Your Message"
-required>
-</textarea>
-
-
-<button
-class="btn btn-primary"
-type="submit">
-
-Send Enquiry →
-
-</button>
-
-
-</form>
 
 </div>
 
@@ -1502,14 +1419,64 @@ Send Enquiry →
 
 
 
-<!-- FOOTER -->
+<!-- ================= SOCIAL ================= -->
+
+<section class="social-section">
+
+<h2>
+Connect With Us
+</h2>
+
+<p>
+Follow SDF Private Limited on social media.
+</p>
+
+
+<div class="social-buttons">
+
+
+<a
+class="social-btn"
+href="#"
+>
+Instagram
+</a>
+
+
+<a
+class="social-btn"
+href="#"
+>
+Facebook
+</a>
+
+
+<a
+class="social-btn"
+href="#"
+>
+YouTube
+</a>
+
+
+</div>
+
+</section>
+
+
+
+</main>
+
+
+
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
 <div class="footer-content">
 
 
-<div>
+<div class="footer-brand">
 
 <h2>
 SDF PRIVATE LIMITED
@@ -1522,11 +1489,10 @@ Quality • Trust • Growth
 </div>
 
 
-<div>
+<div class="footer-right">
 
-<p>
-Building a better business step by step.
-</p>
+Building a better business
+step by step.
 
 </div>
 
@@ -1551,127 +1517,65 @@ All Rights Reserved.
 
 function toggleMenu(){
 
-document
-.getElementById("navLinks")
-.classList.toggle("show");
+    document
+    .getElementById("navLinks")
+    .classList
+    .toggle("show");
 
 }
 
 
-/* CLOSE MOBILE MENU */
+/* CLOSE MENU */
 
 document
 .querySelectorAll(".nav-links a")
-.forEach(link=>{
+.forEach(function(link){
 
-link.addEventListener("click",()=>{
+    link.addEventListener(
+        "click",
+        function(){
 
-document
-.getElementById("navLinks")
-.classList.remove("show");
+            document
+            .getElementById("navLinks")
+            .classList
+            .remove("show");
 
-});
-
-});
-
-
-/* SCROLL REVEAL */
-
-function revealOnScroll(){
-
-const elements =
-document.querySelectorAll(".reveal");
-
-elements.forEach(element=>{
-
-const windowHeight =
-window.innerHeight;
-
-const elementTop =
-element.getBoundingClientRect().top;
-
-if(elementTop < windowHeight - 80){
-
-element.classList.add("active");
-
-}
+        }
+    );
 
 });
 
-}
 
-window.addEventListener(
-"scroll",
-revealOnScroll
+/* PAUSE CERTIFICATE ANIMATION
+   WHEN USER TOUCHES IT */
+
+const certificateTrack =
+document.querySelector(
+    ".certificate-track"
 );
 
-revealOnScroll();
+certificateTrack.addEventListener(
+    "mouseenter",
+    function(){
 
+        this.style.animationPlayState =
+        "paused";
 
-/* CONTACT FORM */
-
-function sendMessage(event){
-
-event.preventDefault();
-
-alert(
-"Thank you for contacting SDF Private Limited!"
+    }
 );
 
-}
+certificateTrack.addEventListener(
+    "mouseleave",
+    function(){
 
+        this.style.animationPlayState =
+        "running";
 
-/* 3D CARD EFFECT */
-
-document
-.querySelectorAll(".card")
-.forEach(card=>{
-
-card.addEventListener(
-"mousemove",
-(e)=>{
-
-const rect =
-card.getBoundingClientRect();
-
-const x =
-e.clientX - rect.left;
-
-const y =
-e.clientY - rect.top;
-
-const centerX =
-rect.width / 2;
-
-const centerY =
-rect.height / 2;
-
-const rotateX =
-(y-centerY)/20;
-
-const rotateY =
-(centerX-x)/20;
-
-card.style.transform =
-`translateY(-8px)
-rotateX(${rotateX}deg)
-rotateY(${rotateY}deg)`;
-
-});
-
-
-card.addEventListener(
-"mouseleave",
-()=>{
-
-card.style.transform="";
-
-});
-
-});
+    }
+);
 
 </script>
 
+
 </body>
 </html>
-```
