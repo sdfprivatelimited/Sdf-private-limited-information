@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SDF Private Limited | Quality • Trust • Growth</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f4f8f5;
+    color:#14251b;
+    overflow-x:hidden;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:72px;
+    z-index:1000;
+    background:rgba(255,255,255,.88);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(0,0,0,.08);
+}
+
+.navbar{
+    max-width:1200px;
+    height:100%;
+    margin:auto;
+    padding:0 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:800;
+    font-size:20px;
+    color:#126b3a;
+}
+
+.logo-box{
+    width:42px;
+    height:42px;
+    border-radius:12px;
+    background:linear-gradient(145deg,#1b8b4d,#07572d);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    box-shadow:8px 8px 18px rgba(0,80,40,.22),
+               -5px -5px 12px white;
+}
+
+.nav-links{
+    display:flex;
+    gap:28px;
+    list-style:none;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#26372d;
+    font-weight:600;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#128344;
+}
+
+.menu-btn{
+    display:none;
+    border:0;
+    background:none;
+    font-size:28px;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:100vh;
+    padding:120px 20px 70px;
+    display:flex;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+    background:
+        radial-gradient(circle at 10% 20%,rgba(52,180,104,.18),transparent 30%),
+        radial-gradient(circle at 90% 80%,rgba(255,196,70,.18),transparent 30%),
+        linear-gradient(135deg,#f7fff9,#edf8f0);
+}
+
+.hero-container{
+    max-width:1200px;
+    width:100%;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:50px;
+    align-items:center;
+}
+
+.badge{
+    display:inline-block;
+    padding:9px 17px;
+    border-radius:30px;
+    background:#e0f6e9;
+    color:#087239;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(42px,6vw,76px);
+    line-height:1;
+    margin-bottom:20px;
+    color:#103d25;
+}
+
+.hero h1 span{
+    color:#168346;
+}
+
+.hero p{
+    font-size:18px;
+    line-height:1.8;
+    max-width:620px;
+    color:#536359;
+}
+
+.hero-buttons{
+    margin-top:30px;
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:14px 24px;
+    border-radius:14px;
+    text-decoration:none;
+    font-weight:700;
+    display:inline-block;
+    transition:.3s;
+}
+
+.btn-primary{
+    color:white;
+    background:linear-gradient(145deg,#1c9954,#096332);
+    box-shadow:0 12px 25px rgba(10,112,57,.25);
+}
+
+.btn-primary:hover{
+    transform:translateY(-4px);
+}
+
+.btn-secondary{
+    color:#126b3a;
+    background:white;
+    border:1px solid #dce9df;
+}
+
+/* ================= 3D OBJECT ================= */
+
+.scene{
+    height:440px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    perspective:1000px;
+}
+
+.cube{
+    width:250px;
+    height:250px;
+    position:relative;
+    transform-style:preserve-3d;
+    animation:rotateCube 12s infinite linear;
+}
+
+.face{
+    position:absolute;
+    width:250px;
+    height:250px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    border-radius:25px;
+    background:linear-gradient(145deg,#1b9552,#07582f);
+    color:white;
+    border:2px solid rgba(255,255,255,.3);
+    box-shadow:inset 0 0 40px rgba(255,255,255,.08);
+}
+
+.face strong{
+    font-size:30px;
+}
+
+.front{
+    transform:translateZ(125px);
+}
+
+.back{
+    transform:rotateY(180deg) translateZ(125px);
+}
+
+.right{
+    transform:rotateY(90deg) translateZ(125px);
+}
+
+.left{
+    transform:rotateY(-90deg) translateZ(125px);
+}
+
+.top{
+    transform:rotateX(90deg) translateZ(125px);
+}
+
+.bottom{
+    transform:rotateX(-90deg) translateZ(125px);
+}
+
+@keyframes rotateCube{
+    0%{transform:rotateX(-10deg) rotateY(0deg);}
+    50%{transform:rotateX(10deg) rotateY(180deg);}
+    100%{transform:rotateX(-10deg) rotateY(360deg);}
+}
+
+/* ================= SECTION ================= */
+
+section{
+    padding:90px 20px;
+}
+
+.container{
+    max-width:1150px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title span{
+    color:#148247;
+    font-weight:700;
+}
+
+.section-title h2{
+    font-size:40px;
+    margin:10px 0;
+}
+
+.section-title p{
+    color:#66736a;
+}
+
+/* ================= CARDS ================= */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.card{
+    background:rgba(255,255,255,.85);
+    border:1px solid #e0e9e3;
+    border-radius:25px;
+    padding:30px;
+    box-shadow:
+        12px 12px 30px rgba(28,75,46,.08),
+        -8px -8px 25px rgba(255,255,255,.9);
+    transition:.4s;
+    transform-style:preserve-3d;
+}
+
+.card:hover{
+    transform:translateY(-10px) rotateX(3deg) rotateY(-3deg);
+    box-shadow:15px 20px 40px rgba(20,90,50,.14);
+}
+
+.icon{
+    width:60px;
+    height:60px;
+    border-radius:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    background:#e5f6eb;
+    margin-bottom:20px;
+}
+
+.card h3{
+    margin-bottom:12px;
+    font-size:21px;
+}
+
+.card p{
+    color:#647068;
+    line-height:1.7;
+}
+
+/* ================= MOTIVATION ================= */
+
+.motivation{
+    background:linear-gradient(135deg,#0c6636,#063b22);
+    color:white;
+    position:relative;
+    overflow:hidden;
+}
+
+.motivation .section-title p{
+    color:#c9ded0;
+}
+
+.quote{
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+    padding:45px;
+    border:1px solid rgba(255,255,255,.18);
+    border-radius:30px;
+    background:rgba(255,255,255,.07);
+    backdrop-filter:blur(10px);
+    box-shadow:0 25px 70px rgba(0,0,0,.2);
+}
+
+.quote h2{
+    font-size:clamp(28px,4vw,48px);
+    line-height:1.3;
+    margin-bottom:20px;
+}
+
+.quote p{
+    color:#d7e8dd;
+    line-height:1.8;
+}
+
+/* ================= PRODUCTS ================= */
+
+.product-card{
+    overflow:hidden;
+    padding:0;
+}
+
+.product-img{
+    height:210px;
+    background:linear-gradient(145deg,#dff3e5,#f7faf7);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:70px;
+}
+
+.product-content{
+    padding:25px;
+}
+
+.product-content h3{
+    margin-bottom:10px;
+}
+
+.product-content p{
+    margin-bottom:15px;
+    color:#68746c;
+    line-height:1.6;
+}
+
+.tag{
+    display:inline-block;
+    padding:7px 12px;
+    background:#e7f7ed;
+    color:#147540;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:700;
+}
+
+/* ================= STATS ================= */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.stat{
+    text-align:center;
+    padding:30px 15px;
+    border-radius:22px;
+    background:white;
+    box-shadow:0 12px 35px rgba(0,0,0,.06);
+}
+
+.stat h3{
+    color:#138046;
+    font-size:35px;
+}
+
+.stat p{
+    color:#69736d;
+    margin-top:8px;
+}
+
+/* ================= DOCUMENTS ================= */
+
+.document{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.document-icon{
+    min-width:55px;
+    height:55px;
+    border-radius:15px;
+    background:#e8f5ec;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:25px;
+}
+
+.document h3{
+    margin-bottom:5px;
+}
+
+.document p{
+    font-size:14px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact-box{
+    background:white;
+    border-radius:30px;
+    padding:45px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    box-shadow:0 20px 60px rgba(0,0,0,.07);
+}
+
+.contact-info h2{
+    font-size:35px;
+    margin-bottom:15px;
+}
+
+.contact-info p{
+    color:#657168;
+    line-height:1.8;
+}
+
+.contact-list{
+    margin-top:25px;
+    display:grid;
+    gap:15px;
+}
+
+.contact-item{
+    padding:15px;
+    background:#f2f8f4;
+    border-radius:15px;
+}
+
+.contact-form{
+    display:grid;
+    gap:15px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:15px;
+    border:1px solid #dfe8e2;
+    border-radius:13px;
+    outline:none;
+    font-size:15px;
+}
+
+.contact-form textarea{
+    height:130px;
+    resize:none;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#062d1b;
+    color:white;
+    padding:45px 20px 25px;
+}
+
+.footer-content{
+    max-width:1150px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.footer-content p{
+    color:#b7cfc0;
+    margin-top:10px;
+}
+
+.footer-bottom{
+    max-width:1150px;
+    margin:30px auto 0;
+    padding-top:20px;
+    border-top:1px solid rgba(255,255,255,.1);
+    color:#a8c0b2;
+    font-size:14px;
+}
+
+/* ================= SCROLL ANIMATION ================= */
+
+.reveal{
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:800px){
+
+    .nav-links{
+        position:absolute;
+        top:72px;
+        left:0;
+        width:100%;
+        background:white;
+        display:none;
+        flex-direction:column;
+        padding:25px;
+        box-shadow:0 15px 25px rgba(0,0,0,.08);
+    }
+
+    .nav-links.show{
+        display:flex;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .hero-container{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .hero p{
+        margin:auto;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .scene{
+        height:330px;
+        transform:scale(.72);
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .contact-box{
+        grid-template-columns:1fr;
+        padding:30px;
+    }
+}
+
+@media(max-width:480px){
+
+    section{
+        padding:70px 15px;
+    }
+
+    .hero{
+        padding-left:15px;
+        padding-right:15px;
+    }
+
+    .hero h1{
+        font-size:43px;
+    }
+
+    .section-title h2{
+        font-size:31px;
+    }
+
+    .stats{
+        grid-template-columns:1fr;
+    }
+
+    .cube{
+        width:210px;
+        height:210px;
+    }
+
+    .face{
+        width:210px;
+        height:210px;
+    }
+
+    .front{transform:translateZ(105px);}
+    .back{transform:rotateY(180deg) translateZ(105px);}
+    .right{transform:rotateY(90deg) translateZ(105px);}
+    .left{transform:rotateY(-90deg) translateZ(105px);}
+    .top{transform:rotateX(90deg) translateZ(105px);}
+    .bottom{transform:rotateX(-90deg) translateZ(105px);}
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+<div class="navbar">
+
+    <div class="logo">
+        <div class="logo-box">SDF</div>
+        <span>SDF PRIVATE LIMITED</span>
+    </div>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#documents">Documents</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+</div>
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+<div class="hero-container">
+
+<div class="hero-text reveal">
+
+    <span class="badge">PRIVATE LIMITED BUSINESS</span>
+
+    <h1>
+        SDF <span>PRIVATE</span><br>
+        LIMITED
+    </h1>
+
+    <p>
+        Building a growing business with a focus on
+        quality products, customer trust and continuous
+        improvement.
+    </p>
+
+    <div class="hero-buttons">
+        <a href="#products" class="btn btn-primary">
+            Explore Products →
+        </a>
+
+        <a href="#about" class="btn btn-secondary">
+            About Business
+        </a>
+    </div>
+
+</div>
+
+
+<div class="scene reveal">
+
+<div class="cube">
+
+    <div class="face front">
+        <strong>SDF<br>PRIVATE<br>LIMITED</strong>
+    </div>
+
+    <div class="face back">
+        <strong>QUALITY</strong>
+    </div>
+
+    <div class="face right">
+        <strong>TRUST</strong>
+    </div>
+
+    <div class="face left">
+        <strong>GROWTH</strong>
+    </div>
+
+    <div class="face top">
+        <strong>SDF</strong>
+    </div>
+
+    <div class="face bottom">
+        <strong>2026</strong>
+    </div>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+<div class="container">
+
+<div class="section-title reveal">
+    <span>ABOUT US</span>
+    <h2>Our Business</h2>
+    <p>Focused on building a trusted and growing business.</p>
+</div>
+
+
+<div class="grid">
+
+<div class="card reveal">
+    <div class="icon">🏢</div>
+    <h3>Who We Are</h3>
+    <p>
+        SDF Private Limited is a growing business
+        focused on providing useful and quality
+        products to customers.
+    </p>
+</div>
+
+<div class="card reveal">
+    <div class="icon">🎯</div>
+    <h3>Our Mission</h3>
+    <p>
+        To build a reliable business through
+        quality products, responsible service
+        and customer satisfaction.
+    </p>
+</div>
+
+<div class="card reveal">
+    <div class="icon">🌱</div>
+    <h3>Our Vision</h3>
+    <p>
+        To grow step by step and create a
+        recognizable business brand based on
+        trust and consistency.
+    </p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= MOTIVATION ================= -->
+
+<section class="motivation">
+
+<div class="container">
+
+<div class="section-title reveal">
+    <span style="color:#8de2af;">OUR MOTIVATION</span>
+    <h2>Build Today. Grow Tomorrow.</h2>
+    <p>
+        Every successful business begins with a small step.
+    </p>
+</div>
+
+<div class="quote reveal">
+
+<h2>
+“Quality is our commitment.<br>
+Trust is our foundation.<br>
+Growth is our journey.”
+</h2>
+
+<p>
+We believe that consistent effort, honest business
+practices and customer trust can create a stronger
+future.
+</p>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= PRODUCTS ================= -->
+
+<section id="products">
+
+<div class="container">
+
+<div class="section-title reveal">
+    <span>OUR PRODUCTS</span>
+    <h2>Available Products</h2>
+    <p>Some of our product categories.</p>
+</div>
+
+
+<div class="grid">
+
+<div class="card product-card reveal">
+
+    <div class="product-img">🌾</div>
+
+    <div class="product-content">
+        <span class="tag">DRY FOOD</span>
+        <h3>Dry Food Products</h3>
+        <p>
+            Quality-focused dry food products
+            suitable for everyday use.
+        </p>
+    </div>
+
+</div>
+
+
+<div class="card product-card reveal">
+
+    <div class="product-img">🥜</div>
+
+    <div class="product-content">
+        <span class="tag">FOOD</span>
+        <h3>Packaged Food</h3>
+        <p>
+            Convenient packaged food products
+            for everyday customers.
+        </p>
+    </div>
+
+</div>
+
+
+<div class="card product-card reveal">
+
+    <div class="product-img">🛒</div>
+
+    <div class="product-content">
+        <span class="tag">GROCERY</span>
+        <h3>Daily Essentials</h3>
+        <p>
+            Selected daily-use grocery and
+            essential products.
+        </p>
+    </div>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= STATS ================= -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title reveal">
+    <span>BUSINESS AT A GLANCE</span>
+    <h2>Our Focus</h2>
+</div>
+
+<div class="stats">
+
+<div class="stat reveal">
+    <h3>01</h3>
+    <p>Growing Business</p>
+</div>
+
+<div class="stat reveal">
+    <h3>03+</h3>
+    <p>Product Categories</p>
+</div>
+
+<div class="stat reveal">
+    <h3>100%</h3>
+    <p>Commitment</p>
+</div>
+
+<div class="stat reveal">
+    <h3>24/7</h3>
+    <p>Business Presence</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= DOCUMENTS ================= -->
+
+<section id="documents">
+
+<div class="container">
+
+<div class="section-title reveal">
+    <span>BUSINESS DOCUMENTS</span>
+    <h2>Our Information</h2>
+    <p>
+        Important business information and documents.
+    </p>
+</div>
+
+
+<div class="grid">
+
+<div class="card document reveal">
+    <div class="document-icon">📄</div>
+    <div>
+        <h3>Company Registration</h3>
+        <p>Company registration information</p>
+    </div>
+</div>
+
+
+<div class="card document reveal">
+    <div class="document-icon">🧾</div>
+    <div>
+        <h3>GST Information</h3>
+        <p>GST registration information</p>
+    </div>
+</div>
+
+
+<div class="card document reveal">
+    <div class="document-icon">📋</div>
+    <div>
+        <h3>Trade Licence</h3>
+        <p>Business licence information</p>
+    </div>
+</div>
+
+
+<div class="card document reveal">
+    <div class="document-icon">🏦</div>
+    <div>
+        <h3>PAN Information</h3>
+        <p>Business PAN information</p>
+    </div>
+</div>
+
+
+<div class="card document reveal">
+    <div class="document-icon">📑</div>
+    <div>
+        <h3>Certificates</h3>
+        <p>Other available certificates</p>
+    </div>
+</div>
+
+
+<div class="card document reveal">
+    <div class="document-icon">🔐</div>
+    <div>
+        <h3>Business Records</h3>
+        <p>Verified business information</p>
+    </div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+
+<div class="container">
+
+<div class="contact-box reveal">
+
+<div class="contact-info">
+
+<h2>Let's Connect</h2>
+
+<p>
+For product enquiries, business enquiries
+or general information, please contact us.
+</p>
+
+<div class="contact-list">
+
+<div class="contact-item">
+📧 <strong>Email</strong><br>
+privatelimitedsdf@gmail.com
+</div>
+
+<div class="contact-item">
+🌐 <strong>Website</strong><br>
+sdfprivatelimited.com
+</div>
+
+<div class="contact-item">
+📱 <strong>Social Media</strong><br>
+Instagram • Facebook • YouTube
+</div>
+
+</div>
+
+</div>
+
+
+<form class="contact-form" onsubmit="sendMessage(event)">
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="email" placeholder="Your Email" required>
+
+<input type="text" placeholder="Subject" required>
+
+<textarea placeholder="Your Message" required></textarea>
+
+<button class="btn btn-primary" type="submit">
+Send Enquiry →
+</button>
+
+</form>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="footer-content">
+
+<div>
+<h2>SDF PRIVATE LIMITED</h2>
+<p>Quality • Trust • Growth</p>
+</div>
+
+<div>
+<p>Building a better business step by step.</p>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 SDF Private Limited. All Rights Reserved.
+</div>
+
+</footer>
+
+
+<script>
+
+/* MOBILE MENU */
+
+function toggleMenu(){
+
+    document
+    .getElementById("navLinks")
+    .classList.toggle("show");
+
+}
+
+
+/* CLOSE MENU AFTER CLICK */
+
+document.querySelectorAll(".nav-links a").forEach(link=>{
+
+    link.addEventListener("click",()=>{
+
+        document
+        .getElementById("navLinks")
+        .classList.remove("show");
+
+    });
+
+});
+
+
+/* SCROLL REVEAL */
+
+function revealOnScroll(){
+
+    const elements =
+    document.querySelectorAll(".reveal");
+
+    elements.forEach(element=>{
+
+        const windowHeight =
+        window.innerHeight;
+
+        const elementTop =
+        element.getBoundingClientRect().top;
+
+        if(elementTop < windowHeight - 80){
+
+            element.classList.add("active");
+
+        }
+
+    });
+
+}
+
+window.addEventListener("scroll",revealOnScroll);
+
+revealOnScroll();
+
+
+/* CONTACT FORM */
+
+function sendMessage(event){
+
+    event.preventDefault();
+
+    alert(
+        "Thank you for contacting SDF Private Limited!"
+    );
+
+}
+
+
+/* 3D CARD MOUSE EFFECT */
+
+document.querySelectorAll(".card").forEach(card=>{
+
+    card.addEventListener("mousemove",(e)=>{
+
+        const rect =
+        card.getBoundingClientRect();
+
+        const x =
+        e.clientX - rect.left;
+
+        const y =
+        e.clientY - rect.top;
+
+        const centerX =
+        rect.width / 2;
+
+        const centerY =
+        rect.height / 2;
+
+        const rotateX =
+        (y-centerY)/20;
+
+        const rotateY =
+        (centerX-x)/20;
+
+        card.style.transform =
+        `translateY(-8px)
+         rotateX(${rotateX}deg)
+         rotateY(${rotateY}deg)`;
+
+    });
+
+
+    card.addEventListener("mouseleave",()=>{
+
+        card.style.transform="";
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
