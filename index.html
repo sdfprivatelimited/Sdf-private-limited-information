@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,13 +6,15 @@
 
 <title>SDF Private Limited</title>
 
+<meta name="description"
+content="SDF Private Limited - Quality Dry Food Products, Chia Seed, Ghee, Honey, Honey Nuts and Pickle.">
+
 <style>
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial,Helvetica,sans-serif;
 }
 
 html{
@@ -21,1143 +22,656 @@ html{
 }
 
 body{
+    font-family:Arial, Helvetica, sans-serif;
     background:#f5f8f6;
-    color:#17251c;
-    overflow-x:hidden;
+    color:#17221c;
 }
-
 
 /* ================= HEADER ================= */
 
 header{
-    position:fixed;
+    position:sticky;
     top:0;
-    left:0;
-    width:100%;
-    height:72px;
-    z-index:1000;
-
-    background:rgba(255,255,255,.93);
-    backdrop-filter:blur(15px);
-
-    border-bottom:1px solid rgba(0,0,0,.08);
+    z-index:999;
+    background:linear-gradient(135deg,#063d2b,#087044,#0b8a52);
+    box-shadow:0 5px 25px rgba(0,0,0,.20);
 }
 
 .navbar{
-    max-width:1200px;
-    height:100%;
+    max-width:1250px;
     margin:auto;
+    height:78px;
     padding:0 20px;
-
     display:flex;
     align-items:center;
     justify-content:space-between;
 }
 
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
 .logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
-
-    color:#126b3a;
-    font-size:19px;
-    font-weight:800;
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    object-fit:cover;
+    background:white;
+    border:3px solid white;
+    box-shadow:0 5px 15px rgba(0,0,0,.25);
 }
 
-.logo-box{
-    width:43px;
-    height:43px;
-
-    border-radius:12px;
-
-    background:linear-gradient(
-        145deg,
-        #1b8b4d,
-        #07572d
-    );
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
+.logo-text{
     color:white;
-
-    box-shadow:
-    7px 8px 18px rgba(0,80,40,.22);
 }
 
-.nav-links{
+.logo-text h2{
+    font-size:21px;
+    letter-spacing:.5px;
+}
+
+.logo-text span{
+    font-size:11px;
+    color:#d9ffe9;
+}
+
+nav{
     display:flex;
-    gap:28px;
-    list-style:none;
+    gap:7px;
 }
 
-.nav-links a{
+nav a{
+    color:white;
     text-decoration:none;
-    color:#26372d;
-    font-weight:600;
+    padding:10px 14px;
+    border-radius:25px;
+    font-size:14px;
     transition:.3s;
 }
 
-.nav-links a:hover{
-    color:#128344;
+nav a:hover{
+    background:white;
+    color:#087044;
 }
 
 .menu-btn{
     display:none;
-
-    border:0;
-    background:none;
-
+    color:white;
     font-size:28px;
     cursor:pointer;
 }
 
-
-/* ================= MAIN ================= */
-
-main{
-    padding-top:72px;
-}
-
-
 /* ================= HERO ================= */
 
 .hero{
-    min-height:350px;
-
+    min-height:420px;
     display:flex;
     align-items:center;
     justify-content:center;
-
     text-align:center;
-
-    padding:65px 20px;
+    padding:70px 20px;
 
     background:
-    radial-gradient(
-        circle at 20% 20%,
-        rgba(41,170,95,.14),
-        transparent 30%
-    ),
-
-    radial-gradient(
-        circle at 80% 80%,
-        rgba(240,190,50,.12),
-        transparent 30%
-    ),
-
-    linear-gradient(
-        135deg,
-        #ffffff,
-        #eef8f1
-    );
+    radial-gradient(circle at 20% 20%,rgba(255,255,255,.16),transparent 30%),
+    radial-gradient(circle at 80% 80%,rgba(255,50,50,.18),transparent 30%),
+    linear-gradient(135deg,#063d2b,#087044,#0a9a59);
 }
 
 .hero-content{
     max-width:850px;
 }
 
-.hero-badge{
-    display:inline-block;
-
-    padding:9px 18px;
-
-    border-radius:30px;
-
-    background:#e2f6e9;
-
-    color:#087239;
-
-    font-size:13px;
-
-    font-weight:700;
-
+.hero-logo{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid white;
+    box-shadow:0 10px 35px rgba(0,0,0,.3);
     margin-bottom:20px;
 }
 
 .hero h1{
-    font-size:clamp(40px,7vw,72px);
-
-    line-height:1.05;
-
-    color:#103d25;
-
-    margin-bottom:18px;
-}
-
-.hero h1 span{
-    color:#168346;
+    color:white;
+    font-size:48px;
+    margin-bottom:12px;
 }
 
 .hero p{
-    max-width:680px;
-
-    margin:auto;
-
-    color:#5d6c63;
-
-    font-size:17px;
-
-    line-height:1.8;
+    color:#eafff2;
+    font-size:18px;
+    margin-bottom:25px;
 }
 
-
-/* ================= CERTIFICATES ================= */
-
-.certificate-section{
-    background:#ffffff;
-
-    padding:30px 0;
-
-    overflow:hidden;
-
-    border-bottom:1px solid #e5ebe7;
+.hero-btn{
+    display:inline-block;
+    text-decoration:none;
+    color:#087044;
+    background:white;
+    padding:13px 25px;
+    border-radius:30px;
+    font-weight:bold;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
 }
 
-.certificate-title{
-    text-align:center;
+/* ================= COMMON ================= */
 
-    margin-bottom:20px;
-
-    color:#126b3a;
-
-    font-size:14px;
-
-    font-weight:800;
-
-    letter-spacing:1px;
-}
-
-.certificate-track{
-    width:max-content;
-
-    display:flex;
-
-    gap:18px;
-
-    animation:
-    certificateMove 22s linear infinite;
-}
-
-.certificate-row{
-    display:flex;
-
-    gap:18px;
-}
-
-.certificate{
-    width:280px;
-
-    min-height:85px;
-
-    padding:14px 18px;
-
-    border-radius:18px;
-
-    background:
-    linear-gradient(
-        145deg,
-        #ffffff,
-        #f1f7f3
-    );
-
-    border:1px solid #dce8df;
-
-    display:flex;
-
-    align-items:center;
-
-    gap:14px;
-
-    box-shadow:
-    0 8px 25px rgba(20,80,45,.08);
-
-    flex-shrink:0;
-}
-
-.cert-icon{
-    width:52px;
-    height:52px;
-
-    flex-shrink:0;
-
-    border-radius:15px;
-
-    background:
-    linear-gradient(
-        145deg,
-        #e5f7eb,
-        #cdebd7
-    );
-
-    display:flex;
-
-    align-items:center;
-    justify-content:center;
-
-    font-size:25px;
-}
-
-.cert-info h3{
-    color:#126b3a;
-
-    font-size:15px;
-
-    margin-bottom:5px;
-}
-
-.cert-info p{
-    color:#5f6b63;
-
-    font-size:12px;
-
-    word-break:break-all;
-}
-
-@keyframes certificateMove{
-
-    0%{
-        transform:translateX(0);
-    }
-
-    100%{
-        transform:translateX(-50%);
-    }
-
-}
-
-
-/* ================= LOCATIONS ================= */
-
-.locations{
-    padding:70px 20px;
-
-    background:#f5f9f6;
+section{
+    padding:65px 18px;
 }
 
 .container{
-    max-width:1150px;
+    max-width:1200px;
     margin:auto;
 }
 
 .section-title{
     text-align:center;
-    margin-bottom:40px;
-}
-
-.section-title small{
-    color:#158046;
-
-    font-weight:800;
-
-    letter-spacing:1px;
+    margin-bottom:35px;
 }
 
 .section-title h2{
-    font-size:40px;
-
-    margin:10px 0;
-
-    color:#153a24;
+    font-size:32px;
+    color:#075c3a;
 }
 
 .section-title p{
-    color:#69766e;
+    color:#68736d;
+    margin-top:8px;
 }
 
+/* ================= CERTIFICATES ================= */
 
-/* LOCATION GRID */
-
-.location-grid{
-    display:grid;
-
-    grid-template-columns:
-    repeat(3,1fr);
-
-    gap:22px;
-}
-
-.location-card{
-    padding:28px;
-
+.cert-section{
     background:white;
-
-    border-radius:22px;
-
-    border:1px solid #dfe9e2;
-
-    box-shadow:
-    0 12px 32px rgba(25,75,45,.08);
-
-    text-align:center;
-
-    transition:.35s;
+    padding:30px 0;
+    overflow:hidden;
 }
 
-.location-card:hover{
-    transform:translateY(-8px);
-
-    box-shadow:
-    0 20px 40px rgba(25,75,45,.14);
+.cert-track{
+    display:flex;
+    width:max-content;
+    animation:certificateMove 22s linear infinite;
 }
 
-.location-icon{
-    width:65px;
-    height:65px;
+.cert-row{
+    display:flex;
+    gap:20px;
+    padding-right:20px;
+}
 
-    margin:0 auto 15px;
+.cert-card{
+    min-width:270px;
+    padding:17px 22px;
+    border-radius:15px;
 
-    border-radius:20px;
+    background:linear-gradient(135deg,#ffffff,#eaf8f0);
 
-    background:#e5f6eb;
+    border:1px solid #d4eadc;
+    box-shadow:0 6px 20px rgba(0,80,40,.10);
 
+    display:flex;
+    align-items:center;
+    gap:13px;
+}
+
+.cert-icon{
+    width:48px;
+    height:48px;
+    border-radius:50%;
     display:flex;
     align-items:center;
     justify-content:center;
 
-    font-size:31px;
+    background:#087044;
+    color:white;
+    font-weight:bold;
+    font-size:12px;
 }
 
-.location-card h3{
-    color:#153d26;
-
-    font-size:22px;
-
-    margin-bottom:8px;
-}
-
-.location-card p{
-    color:#69766e;
-
+.cert-card h4{
+    color:#075c3a;
     font-size:14px;
-
-    line-height:1.6;
 }
 
-.location-status{
-    display:inline-block;
-
-    margin-top:14px;
-
-    padding:7px 13px;
-
-    border-radius:20px;
-
-    background:#e7f7ed;
-
-    color:#147540;
-
-    font-size:11px;
-
-    font-weight:800;
+.cert-card p{
+    font-size:12px;
+    color:#555;
+    margin-top:4px;
 }
 
-
-/* ================= BANNER SLIDER ================= */
-
-.banner-section{
-    padding:75px 20px;
-
-    background:#ffffff;
+@keyframes certificateMove{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-50%);
+    }
 }
 
-.banner-slider{
-    max-width:1150px;
+/* ================= BANNER ================= */
 
-    height:480px;
+.gallery-section{
+    background:
+    radial-gradient(circle at 10% 20%,rgba(0,130,80,.10),transparent 30%),
+    radial-gradient(circle at 90% 80%,rgba(255,0,0,.08),transparent 30%),
+    #f5f8f6;
+}
 
-    margin:auto;
-
+.slider{
     position:relative;
-
+    max-width:1150px;
+    height:470px;
+    margin:auto;
     overflow:hidden;
-
-    border-radius:28px;
-
-    background:#10251a;
-
+    border-radius:25px;
+    background:#111;
     box-shadow:
-    0 25px 65px rgba(15,65,38,.18);
+        0 20px 50px rgba(0,0,0,.25),
+        0 0 0 5px rgba(8,112,68,.08);
+}
+
+.slides{
+    display:flex;
+    height:100%;
+    transition:transform .7s ease;
 }
 
 .slide{
-    position:absolute;
-
-    inset:0;
-
-    opacity:0;
-
-    transform:scale(1.04);
-
-    transition:
-    opacity .8s ease,
-    transform 5s ease;
-
-    pointer-events:none;
-}
-
-.slide.active{
-    opacity:1;
-
-    transform:scale(1);
-
-    pointer-events:auto;
+    min-width:100%;
+    height:100%;
+    position:relative;
 }
 
 .slide img{
     width:100%;
     height:100%;
-
     object-fit:cover;
-
-    display:block;
 }
 
-.slide-overlay{
+.slide::after{
+    content:"";
     position:absolute;
-
     inset:0;
-
-    background:
-    linear-gradient(
+    background:linear-gradient(
         90deg,
-        rgba(0,0,0,.68),
-        rgba(0,0,0,.20),
+        rgba(0,0,0,.65),
         rgba(0,0,0,.05)
     );
-
-    display:flex;
-
-    align-items:center;
-
-    padding:50px;
 }
 
-.slide-content{
-    max-width:560px;
+.slide-text{
+    position:absolute;
+    z-index:2;
+    left:45px;
+    top:50%;
+    transform:translateY(-50%);
+    color:white;
+    max-width:550px;
+}
 
+.slide-text h2{
+    font-size:43px;
+    margin-bottom:12px;
+}
+
+.slide-text p{
+    font-size:17px;
+    color:#f1fff6;
+}
+
+.arrow{
+    position:absolute;
+    z-index:5;
+    top:50%;
+    transform:translateY(-50%);
+
+    width:50px;
+    height:50px;
+
+    border:none;
+    border-radius:50%;
+
+    background:rgba(255,255,255,.9);
+    color:#087044;
+
+    font-size:27px;
+    cursor:pointer;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.25);
+}
+
+.arrow:hover{
+    background:#087044;
     color:white;
 }
 
-.slide-content span{
-    display:inline-block;
-
-    padding:7px 13px;
-
-    border-radius:20px;
-
-    background:rgba(255,255,255,.16);
-
-    backdrop-filter:blur(5px);
-
-    font-size:12px;
-
-    font-weight:800;
-
-    margin-bottom:15px;
-}
-
-.slide-content h2{
-    font-size:clamp(30px,5vw,54px);
-
-    line-height:1.1;
-
-    margin-bottom:15px;
-}
-
-.slide-content p{
-    font-size:16px;
-
-    line-height:1.7;
-
-    color:#f0f4f1;
-}
-
-
-/* SLIDER BUTTONS */
-
-.slider-btn{
-    position:absolute;
-
-    top:50%;
-
-    transform:translateY(-50%);
-
-    width:48px;
-    height:48px;
-
-    border:none;
-
-    border-radius:50%;
-
-    background:rgba(255,255,255,.85);
-
-    color:#126b3a;
-
-    font-size:25px;
-
-    cursor:pointer;
-
-    z-index:10;
-
-    transition:.3s;
-}
-
-.slider-btn:hover{
-    background:white;
-
-    transform:
-    translateY(-50%)
-    scale(1.08);
-}
-
 .prev{
-    left:20px;
+    left:18px;
 }
 
 .next{
-    right:20px;
+    right:18px;
 }
 
-
-/* DOTS */
-
-.slider-dots{
+.dots{
     position:absolute;
-
-    bottom:20px;
-
+    bottom:18px;
     left:50%;
-
     transform:translateX(-50%);
-
-    display:flex;
-
-    gap:8px;
-
     z-index:10;
+    display:flex;
+    gap:8px;
 }
 
 .dot{
-    width:9px;
-    height:9px;
-
+    width:11px;
+    height:11px;
     border-radius:50%;
-
-    border:none;
-
-    background:rgba(255,255,255,.55);
-
+    background:white;
+    opacity:.5;
     cursor:pointer;
-
-    transition:.3s;
 }
 
 .dot.active{
-    width:27px;
+    opacity:1;
+    background:#e21b23;
+    transform:scale(1.25);
+}
 
+/* ================= LOCATION ================= */
+
+.location-section{
+    background:white;
+}
+
+.location-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.location-card{
+    position:relative;
+    overflow:hidden;
+    padding:30px 20px;
     border-radius:20px;
 
-    background:white;
-}
-
-
-/* ================= PRODUCTS ================= */
-
-.products{
-    padding:80px 20px;
-
     background:
-    linear-gradient(
-        180deg,
-        #f5f8f6,
-        #ffffff
-    );
+    linear-gradient(145deg,#ffffff,#eaf8f0);
+
+    border:1px solid #d7ebdf;
+
+    box-shadow:0 10px 30px rgba(0,80,40,.12);
+
+    text-align:center;
+    transition:.35s;
 }
 
-.product-grid{
-    display:grid;
-
-    grid-template-columns:
-    repeat(3,1fr);
-
-    gap:25px;
+.location-card::before{
+    content:"";
+    position:absolute;
+    width:120px;
+    height:120px;
+    background:#087044;
+    opacity:.08;
+    border-radius:50%;
+    right:-35px;
+    top:-35px;
 }
 
-.product-card{
-    background:white;
-
-    border-radius:22px;
-
-    overflow:hidden;
-
-    border:1px solid #e1e9e3;
-
-    box-shadow:
-    0 12px 35px rgba(24,75,43,.08);
-
-    transition:.4s;
-}
-
-.product-card:hover{
+.location-card:hover{
     transform:translateY(-8px);
-
-    box-shadow:
-    0 22px 45px rgba(24,75,43,.15);
+    box-shadow:0 18px 40px rgba(0,80,40,.18);
 }
 
-.product-photo{
-    width:100%;
-
-    height:230px;
-
-    background:
-    linear-gradient(
-        145deg,
-        #edf7f0,
-        #ffffff
-    );
+.location-icon{
+    width:65px;
+    height:65px;
+    margin:auto;
+    border-radius:50%;
 
     display:flex;
-
     align-items:center;
     justify-content:center;
 
+    background:#087044;
+    color:white;
+    font-size:27px;
+
+    box-shadow:0 8px 20px rgba(8,112,68,.25);
+}
+
+.location-card h3{
+    margin-top:17px;
+    color:#075c3a;
+    font-size:22px;
+}
+
+.location-card p{
+    margin-top:8px;
+    color:#68736d;
+}
+
+.available{
+    display:inline-block;
+    margin-top:15px;
+    padding:6px 15px;
+    border-radius:20px;
+    background:#e2f8eb;
+    color:#087044;
+    font-size:12px;
+    font-weight:bold;
+}
+
+/* ================= PRODUCTS ================= */
+
+.products-section{
+    background:#f5f8f6;
+}
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.product{
+    background:white;
+    border-radius:20px;
     overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    transition:.3s;
 }
 
-.product-photo img{
+.product:hover{
+    transform:translateY(-7px);
+    box-shadow:0 15px 35px rgba(0,0,0,.14);
+}
+
+.product img{
     width:100%;
-    height:100%;
-
+    height:220px;
     object-fit:cover;
-
-    display:block;
-
-    transition:.5s;
-}
-
-.product-card:hover
-.product-photo img{
-    transform:scale(1.07);
 }
 
 .product-info{
-    padding:20px;
-}
-
-.product-category{
-    display:inline-block;
-
-    padding:6px 11px;
-
-    border-radius:20px;
-
-    background:#e5f6eb;
-
-    color:#13743e;
-
-    font-size:11px;
-
-    font-weight:800;
-
-    margin-bottom:10px;
+    padding:18px;
 }
 
 .product-info h3{
-    color:#173c25;
-
-    font-size:21px;
-
-    margin-bottom:8px;
+    color:#075c3a;
+    font-size:19px;
 }
 
 .product-info p{
-    color:#69756d;
-
-    font-size:14px;
-
-    line-height:1.6;
+    color:#777;
+    font-size:13px;
+    margin-top:7px;
 }
-
 
 /* ================= CONTACT ================= */
 
 .contact{
-    padding:80px 20px;
-
-    background:#ffffff;
+    background:
+    linear-gradient(135deg,#063d2b,#087044,#0b8a52);
+    color:white;
 }
 
 .contact-box{
-    max-width:950px;
-
+    max-width:850px;
     margin:auto;
-
-    padding:45px;
-
-    border-radius:28px;
-
-    background:
-    linear-gradient(
-        145deg,
-        #f7fcf8,
-        #ffffff
-    );
-
-    border:1px solid #dfe9e2;
-
-    box-shadow:
-    0 18px 50px rgba(20,70,40,.08);
-
     text-align:center;
 }
 
 .contact-box h2{
-    font-size:38px;
-
-    color:#153c25;
-
-    margin-bottom:12px;
-}
-
-.contact-box > p{
-    color:#66736b;
-
-    line-height:1.7;
-
-    margin-bottom:30px;
-}
-
-.contact-items{
-    display:grid;
-
-    grid-template-columns:
-    repeat(3,1fr);
-
-    gap:15px;
+    font-size:35px;
+    margin-bottom:18px;
 }
 
 .contact-item{
-    padding:20px 15px;
-
-    background:white;
-
-    border:1px solid #e0e9e3;
-
-    border-radius:17px;
-
-    transition:.3s;
+    margin:13px 0;
+    font-size:16px;
 }
 
-.contact-item:hover{
-    transform:translateY(-5px);
-
-    border-color:#a9d4b7;
-}
-
-.contact-icon{
-    font-size:27px;
-
-    margin-bottom:10px;
-}
-
-.contact-item h4{
-    color:#137640;
-
-    margin-bottom:6px;
-
-    font-size:14px;
-}
-
-.contact-item a,
-.contact-item span{
-    color:#59665e;
-
-    font-size:13px;
-
+.contact-item a{
+    color:white;
     text-decoration:none;
-
-    word-break:break-word;
 }
 
-
-/* ================= SOCIAL ================= */
-
-.social-section{
-    padding:60px 20px;
-
-    background:
-    linear-gradient(
-        135deg,
-        #eef8f1,
-        #f8fbf9
-    );
-
-    text-align:center;
-}
-
-.social-section h2{
-    font-size:32px;
-
-    color:#153c25;
-
-    margin-bottom:10px;
-}
-
-.social-section p{
-    color:#69766e;
-
-    margin-bottom:25px;
-}
-
-.social-buttons{
+.social{
+    margin-top:25px;
     display:flex;
-
     justify-content:center;
-
     gap:12px;
-
     flex-wrap:wrap;
 }
 
-.social-btn{
-    padding:13px 22px;
-
-    border-radius:13px;
-
-    background:white;
-
-    color:#126b3a;
-
+.social a{
     text-decoration:none;
-
-    font-weight:700;
-
-    border:1px solid #dbe8df;
-
-    box-shadow:
-    0 7px 18px rgba(20,70,40,.07);
-
+    color:#087044;
+    background:white;
+    padding:11px 18px;
+    border-radius:25px;
+    font-weight:bold;
     transition:.3s;
 }
 
-.social-btn:hover{
-    transform:translateY(-4px);
-
-    background:#eaf7ee;
+.social a:hover{
+    background:#e21b23;
+    color:white;
 }
-
 
 /* ================= FOOTER ================= */
 
 footer{
-    background:#062d1b;
-
-    color:white;
-
-    padding:45px 20px 25px;
-}
-
-.footer-content{
-    max-width:1150px;
-
-    margin:auto;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    gap:25px;
-
-    flex-wrap:wrap;
-}
-
-.footer-brand h2{
-    font-size:22px;
-}
-
-.footer-brand p{
-    color:#b7cfc0;
-
-    margin-top:8px;
-
-    font-size:14px;
-}
-
-.footer-right{
-    color:#b7cfc0;
-
-    font-size:14px;
-
-    text-align:right;
-}
-
-.footer-bottom{
-    max-width:1150px;
-
-    margin:30px auto 0;
-
-    padding-top:20px;
-
-    border-top:
-    1px solid
-    rgba(255,255,255,.12);
-
-    color:#a8c0b2;
-
-    font-size:13px;
-
+    background:#061d14;
+    color:#bcd0c6;
     text-align:center;
+    padding:22px 15px;
+    font-size:13px;
 }
 
+footer strong{
+    color:white;
+}
 
 /* ================= MOBILE ================= */
 
-@media(max-width:850px){
+@media(max-width:800px){
 
-    .nav-links{
-        position:absolute;
-
-        top:72px;
-        left:0;
-
-        width:100%;
-
-        background:white;
-
-        display:none;
-
-        flex-direction:column;
-
-        padding:25px;
-
-        box-shadow:
-        0 15px 25px rgba(0,0,0,.08);
+    .navbar{
+        height:70px;
     }
 
-    .nav-links.show{
+    nav{
+        display:none;
+        position:absolute;
+        top:70px;
+        left:0;
+        width:100%;
+        background:#063d2b;
+        flex-direction:column;
+        padding:15px;
+    }
+
+    nav.show{
         display:flex;
+    }
+
+    nav a{
+        width:100%;
+        text-align:center;
     }
 
     .menu-btn{
         display:block;
     }
 
-    .location-grid{
-        grid-template-columns:
-        1fr;
-    }
-
-    .product-grid{
-        grid-template-columns:
-        repeat(2,1fr);
-    }
-
-    .contact-items{
-        grid-template-columns:
-        1fr;
-    }
-
-    .banner-slider{
-        height:430px;
-    }
-
-    .slide-overlay{
-        padding:35px;
-    }
-
-    .footer-right{
-        text-align:left;
-    }
-}
-
-
-@media(max-width:550px){
-
-    .logo{
-        font-size:14px;
-    }
-
-    .logo-box{
-        width:38px;
-        height:38px;
-    }
-
     .hero{
-        min-height:330px;
-
-        padding:
-        55px 18px;
+        min-height:390px;
+        padding:50px 18px;
     }
 
     .hero h1{
-        font-size:42px;
-    }
-
-    .hero p{
-        font-size:15px;
-    }
-
-    .section-title h2{
-        font-size:32px;
-    }
-
-    .product-grid{
-        grid-template-columns:1fr;
-    }
-
-    .banner-slider{
-        height:420px;
-
-        border-radius:20px;
-    }
-
-    .slide-overlay{
-        padding:28px;
-    }
-
-    .slide-content h2{
         font-size:34px;
     }
 
-    .slide-content p{
+    .hero-logo{
+        width:90px;
+        height:90px;
+    }
+
+    .slider{
+        height:320px;
+        border-radius:18px;
+    }
+
+    .slide-text{
+        left:25px;
+        right:20px;
+    }
+
+    .slide-text h2{
+        font-size:28px;
+    }
+
+    .slide-text p{
         font-size:14px;
     }
 
-    .slider-btn{
-        width:40px;
-        height:40px;
-
-        font-size:20px;
+    .arrow{
+        width:42px;
+        height:42px;
+        font-size:22px;
     }
 
-    .prev{
-        left:10px;
+    .location-grid,
+    .products{
+        grid-template-columns:1fr;
     }
 
-    .next{
-        right:10px;
+    .section-title h2{
+        font-size:27px;
     }
 
-    .contact-box{
-        padding:30px 20px;
+}
+
+@media(min-width:801px) and (max-width:1000px){
+
+    .location-grid,
+    .products{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .contact-box h2{
-        font-size:31px;
-    }
 }
 
 </style>
 </head>
 
-
 <body>
-
 
 <!-- ================= HEADER ================= -->
 
@@ -1165,83 +679,55 @@ footer{
 
 <div class="navbar">
 
-<div class="logo">
+    <div class="logo-area">
 
-<div class="logo-box">
-SDF
-</div>
+        <img
+        src="images/logo.jpg"
+        class="logo"
+        alt="SDF Private Limited Logo">
 
-<span>SDF PRIVATE LIMITED</span>
+        <div class="logo-text">
+            <h2>SDF PRIVATE LIMITED</h2>
+            <span>Quality • Trust • Growth</span>
+        </div>
 
-</div>
+    </div>
 
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
 
-<button
-class="menu-btn"
-onclick="toggleMenu()">
-
-☰
-
-</button>
-
-
-<ul
-class="nav-links"
-id="navLinks">
-
-<li>
-<a href="#home">Home</a>
-</li>
-
-<li>
-<a href="#locations">Locations</a>
-</li>
-
-<li>
-<a href="#gallery">Gallery</a>
-</li>
-
-<li>
-<a href="#products">Products</a>
-</li>
-
-<li>
-<a href="#contact">Contact</a>
-</li>
-
-</ul>
+    <nav id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#gallery">Banner</a>
+        <a href="#locations">Locations</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
 </div>
 
 </header>
 
 
-<main>
-
-
 <!-- ================= HERO ================= -->
 
-<section
-class="hero"
-id="home">
+<section class="hero" id="home">
 
 <div class="hero-content">
 
-<span class="hero-badge">
-SDF PRIVATE LIMITED
-</span>
+    <img
+    src="images/logo.jpg"
+    class="hero-logo"
+    alt="SDF Logo">
 
-<h1>
-Quality <span>•</span>
-Trust <span>•</span>
-Growth
-</h1>
+    <h1>SDF Private Limited</h1>
 
-<p>
-Quality food and dry food products with a
-focus on trust, consistency and customer
-satisfaction.
-</p>
+    <p>
+        Quality Products • Trusted Service • Growing Together
+    </p>
+
+    <a href="#products" class="hero-btn">
+        Explore Products
+    </a>
 
 </div>
 
@@ -1250,138 +736,151 @@ satisfaction.
 
 <!-- ================= CERTIFICATES ================= -->
 
-<section class="certificate-section">
+<section class="cert-section">
 
-<div class="certificate-title">
-OUR BUSINESS CERTIFICATIONS
-</div>
+<div class="cert-track">
 
+    <div class="cert-row">
 
-<div class="certificate-track">
+        <div class="cert-card">
+            <div class="cert-icon">GST</div>
+            <div>
+                <h4>GST REGISTERED</h4>
+                <p>19ABPCS9686K1Z1</p>
+            </div>
+        </div>
 
+        <div class="cert-card">
+            <div class="cert-icon">FSSAI</div>
+            <div>
+                <h4>FSSAI</h4>
+                <p>302202241099831</p>
+            </div>
+        </div>
 
-<!-- SET 1 -->
+        <div class="cert-card">
+            <div class="cert-icon">ISO</div>
+            <div>
+                <h4>ISO CERTIFIED</h4>
+                <p>ISO Certified</p>
+            </div>
+        </div>
 
-<div class="certificate-row">
-
-<div class="certificate">
-
-<div class="cert-icon">
-🧾
-</div>
-
-<div class="cert-info">
-
-<h3>GST REGISTERED</h3>
-
-<p>
-19ABPCS9686K1Z1
-</p>
-
-</div>
-
-</div>
-
-
-<div class="certificate">
-
-<div class="cert-icon">
-🌿
-</div>
-
-<div class="cert-info">
-
-<h3>FSSAI</h3>
-
-<p>
-302202241099831
-</p>
-
-</div>
-
-</div>
+    </div>
 
 
-<div class="certificate">
+    <!-- duplicate for continuous animation -->
 
-<div class="cert-icon">
-🏆
-</div>
+    <div class="cert-row">
 
-<div class="cert-info">
+        <div class="cert-card">
+            <div class="cert-icon">GST</div>
+            <div>
+                <h4>GST REGISTERED</h4>
+                <p>19ABPCS9686K1Z1</p>
+            </div>
+        </div>
 
-<h3>ISO CERTIFICATE</h3>
+        <div class="cert-card">
+            <div class="cert-icon">FSSAI</div>
+            <div>
+                <h4>FSSAI</h4>
+                <p>302202241099831</p>
+            </div>
+        </div>
 
-<p>
-ISO Certified
-</p>
+        <div class="cert-card">
+            <div class="cert-icon">ISO</div>
+            <div>
+                <h4>ISO CERTIFIED</h4>
+                <p>ISO Certified</p>
+            </div>
+        </div>
+
+    </div>
 
 </div>
 
-</div>
-
-</div>
+</section>
 
 
-<!-- SET 2 -->
+<!-- ================= BANNER FIRST ================= -->
 
-<div class="certificate-row">
+<section class="gallery-section" id="gallery">
 
-<div class="certificate">
+<div class="container">
 
-<div class="cert-icon">
-🧾
-</div>
+<div class="section-title">
 
-<div class="cert-info">
+    <h2>Our Gallery</h2>
 
-<h3>GST REGISTERED</h3>
-
-<p>
-19ABPCS9686K1Z1
-</p>
-
-</div>
+    <p>
+        Explore SDF Private Limited
+    </p>
 
 </div>
 
 
-<div class="certificate">
+<div class="slider">
 
-<div class="cert-icon">
-🌿
-</div>
+    <div class="slides" id="slides">
 
-<div class="cert-info">
+        <div class="slide">
+            <img src="images/banner1.jpg" alt="SDF Banner 1">
+            <div class="slide-text">
+                <h2>Quality You Can Trust</h2>
+                <p>Committed to quality and customer satisfaction.</p>
+            </div>
+        </div>
 
-<h3>FSSAI</h3>
+        <div class="slide">
+            <img src="images/banner2.jpg" alt="SDF Banner 2">
+            <div class="slide-text">
+                <h2>Quality Food Products</h2>
+                <p>Bringing quality products to our customers.</p>
+            </div>
+        </div>
 
-<p>
-302202241099831
-</p>
+        <div class="slide">
+            <img src="images/banner3.jpg" alt="SDF Banner 3">
+            <div class="slide-text">
+                <h2>Growing Together</h2>
+                <p>Building a trusted business for tomorrow.</p>
+            </div>
+        </div>
 
-</div>
+        <div class="slide">
+            <img src="images/banner4.jpg" alt="SDF Banner 4">
+            <div class="slide-text">
+                <h2>Food • Dry Food • More</h2>
+                <p>Quality products for everyday needs.</p>
+            </div>
+        </div>
 
-</div>
+        <div class="slide">
+            <img src="images/banner5.jpg" alt="SDF Banner 5">
+            <div class="slide-text">
+                <h2>Build Today. Grow Tomorrow.</h2>
+                <p>SDF Private Limited</p>
+            </div>
+        </div>
+
+    </div>
 
 
-<div class="certificate">
+    <button class="arrow prev" onclick="prevSlide()">‹</button>
+    <button class="arrow next" onclick="nextSlide()">›</button>
 
-<div class="cert-icon">
-🏆
-</div>
 
-<div class="cert-info">
+    <div class="dots">
 
-<h3>ISO CERTIFICATE</h3>
+        <span class="dot active" onclick="goSlide(0)"></span>
+        <span class="dot" onclick="goSlide(1)"></span>
+        <span class="dot" onclick="goSlide(2)"></span>
+        <span class="dot" onclick="goSlide(3)"></span>
+        <span class="dot" onclick="goSlide(4)"></span>
 
-<p>
-ISO Certified
-</p>
-
-</div>
-
-</div>
+    </div>
 
 </div>
 
@@ -1390,957 +889,400 @@ ISO Certified
 </section>
 
 
+<!-- ================= LOCATION ================= -->
 
-<!-- ================= LOCATIONS ================= -->
-
-<section
-class="locations"
-id="locations">
+<section class="location-section" id="locations">
 
 <div class="container">
 
-
 <div class="section-title">
 
-<small>
-OUR LOCATIONS
-</small>
+    <h2>Our Locations</h2>
 
-<h2>
-Our Branch Locations
-</h2>
-
-<p>
-Serving customers across our available locations.
-</p>
+    <p>
+        Our business locations
+    </p>
 
 </div>
 
 
 <div class="location-grid">
 
+    <div class="location-card">
 
-<div class="location-card">
+        <div class="location-icon">
+            📍
+        </div>
 
-<div class="location-icon">
-📍
-</div>
+        <h3>Baruipur</h3>
 
-<h3>
-Baruipur
-</h3>
+        <p>
+            SDF Private Limited
+        </p>
 
-<p>
-SDF Private Limited
-Branch / Business Location
-</p>
+        <span class="available">
+            AVAILABLE
+        </span>
 
-<span class="location-status">
-AVAILABLE
-</span>
-
-</div>
+    </div>
 
 
-<div class="location-card">
+    <div class="location-card">
 
-<div class="location-icon">
-📍
-</div>
+        <div class="location-icon">
+            📍
+        </div>
 
-<h3>
-Magrahat
-</h3>
+        <h3>Magrahat</h3>
 
-<p>
-SDF Private Limited
-Branch / Business Location
-</p>
+        <p>
+            SDF Private Limited
+        </p>
 
-<span class="location-status">
-AVAILABLE
-</span>
+        <span class="available">
+            AVAILABLE
+        </span>
 
-</div>
+    </div>
 
 
-<div class="location-card">
+    <div class="location-card">
 
-<div class="location-icon">
-📍
-</div>
+        <div class="location-icon">
+            📍
+        </div>
 
-<h3>
-Sangrampur
-</h3>
+        <h3>Sangrampur</h3>
 
-<p>
-SDF Private Limited
-Branch / Business Location
-</p>
+        <p>
+            SDF Private Limited
+        </p>
 
-<span class="location-status">
-AVAILABLE
-</span>
+        <span class="available">
+            AVAILABLE
+        </span>
 
-</div>
-
+    </div>
 
 </div>
 
 </div>
 
 </section>
-
-
-
-<!-- ================= 5 PHOTO BANNER ================= -->
-
-<section
-class="banner-section"
-id="gallery">
-
-<div class="container">
-
-
-<div class="section-title">
-
-<small>
-SDF PRIVATE LIMITED
-</small>
-
-<h2>
-Our Business Gallery
-</h2>
-
-<p>
-Explore our business, products and activities.
-</p>
-
-</div>
-
-
-<div class="banner-slider"
-id="slider">
-
-
-<!-- SLIDE 1 -->
-
-<div class="slide active">
-
-<img
-src="images/banner1.jpg"
-alt="SDF Private Limited">
-
-<div class="slide-overlay">
-
-<div class="slide-content">
-
-<span>
-SDF PRIVATE LIMITED
-</span>
-
-<h2>
-Quality You Can Trust
-</h2>
-
-<p>
-Building a growing business with
-quality products and customer trust.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- SLIDE 2 -->
-
-<div class="slide">
-
-<img
-src="images/banner2.jpg"
-alt="SDF Food Products">
-
-<div class="slide-overlay">
-
-<div class="slide-content">
-
-<span>
-OUR PRODUCTS
-</span>
-
-<h2>
-Quality Food Products</h2>
-
-<p>
-Discover our range of food and
-dry food products.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- SLIDE 3 -->
-
-<div class="slide">
-
-<img
-src="images/banner3.jpg"
-alt="SDF Private Limited">
-
-<div class="slide-overlay">
-
-<div class="slide-content">
-
-<span>
-OUR BUSINESS
-</span>
-
-<h2>
-Growing Together</h2>
-
-<p>
-Step by step, building a stronger
-and trusted business.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- SLIDE 4 -->
-
-<div class="slide">
-
-<img
-src="images/banner4.jpg"
-alt="SDF Products">
-
-<div class="slide-overlay">
-
-<div class="slide-content">
-
-<span>
-SDF PRODUCTS
-</span>
-
-<h2>
-Food • Dry Food • More</h2>
-
-<p>
-Explore our available products and
-business categories.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- SLIDE 5 -->
-
-<div class="slide">
-
-<img
-src="images/banner5.jpg"
-alt="SDF Private Limited">
-
-<div class="slide-overlay">
-
-<div class="slide-content">
-
-<span>
-OUR JOURNEY
-</span>
-
-<h2>
-Build Today. Grow Tomorrow.</h2>
-
-<p>
-Quality, trust and continuous growth
-are at the heart of our journey.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- ARROWS -->
-
-<button
-class="slider-btn prev"
-onclick="changeSlide(-1)">
-
-‹
-
-</button>
-
-
-<button
-class="slider-btn next"
-onclick="changeSlide(1)">
-
-›
-
-</button>
-
-
-<!-- DOTS -->
-
-<div class="slider-dots">
-
-<button
-class="dot active"
-onclick="goToSlide(0)">
-</button>
-
-<button
-class="dot"
-onclick="goToSlide(1)">
-</button>
-
-<button
-class="dot"
-onclick="goToSlide(2)">
-</button>
-
-<button
-class="dot"
-onclick="goToSlide(3)">
-</button>
-
-<button
-class="dot"
-onclick="goToSlide(4)">
-</button>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
 
 
 <!-- ================= PRODUCTS ================= -->
 
-<section
-class="products"
-id="products">
+<section class="products-section" id="products">
 
 <div class="container">
 
-
 <div class="section-title">
 
-<small>
-OUR PRODUCTS
-</small>
+    <h2>Our Products</h2>
 
-<h2>
-Available Products
-</h2>
-
-<p>
-Explore our food and dry food products.
-</p>
+    <p>
+        Quality products from SDF Private Limited
+    </p>
 
 </div>
 
 
-<div class="product-grid">
+<div class="products">
 
+    <div class="product">
 
-<!-- CHIA SEED -->
+        <img
+        src="images/chia-seed.jpg"
+        alt="Chia Seed">
 
-<div class="product-card">
+        <div class="product-info">
 
-<div class="product-photo">
+            <h3>Chia Seed</h3>
 
-<img
-src="images/chia-seed.jpg"
-alt="Chia Seed">
+            <p>
+                Quality dry food product.
+            </p>
 
-</div>
+        </div>
 
-<div class="product-info">
+    </div>
 
-<span class="product-category">
-DRY FOOD
-</span>
 
-<h3>
-Chia Seed
-</h3>
+    <div class="product">
 
-<p>
-Quality chia seeds for everyday
-food and healthy lifestyle.
-</p>
+        <img
+        src="images/ghee.jpg"
+        alt="Ghee">
 
-</div>
+        <div class="product-info">
 
-</div>
+            <h3>Ghee</h3>
 
+            <p>
+                Quality food product.
+            </p>
 
+        </div>
 
-<!-- GHEE -->
+    </div>
 
-<div class="product-card">
 
-<div class="product-photo">
+    <div class="product">
 
-<img
-src="images/ghee.jpg"
-alt="Ghee">
+        <img
+        src="images/honey.jpg"
+        alt="Honey">
 
-</div>
+        <div class="product-info">
 
-<div class="product-info">
+            <h3>Honey</h3>
 
-<span class="product-category">
-FOOD
-</span>
+            <p>
+                Natural quality product.
+            </p>
 
-<h3>
-Ghee
-</h3>
+        </div>
 
-<p>
-Quality ghee suitable for everyday
-cooking and food preparation.
-</p>
+    </div>
 
-</div>
 
-</div>
+    <div class="product">
 
+        <img
+        src="images/honey-nuts.jpg"
+        alt="Honey Nuts">
 
+        <div class="product-info">
 
-<!-- HONEY -->
+            <h3>Honey Nuts</h3>
 
-<div class="product-card">
+            <p>
+                Quality and delicious food.
+            </p>
 
-<div class="product-photo">
+        </div>
 
-<img
-src="images/honey.jpg"
-alt="Honey">
+    </div>
 
-</div>
 
-<div class="product-info">
+    <div class="product">
 
-<span class="product-category">
-FOOD
-</span>
+        <img
+        src="images/pickle.jpg"
+        alt="Pickle">
 
-<h3>
-Honey
-</h3>
+        <div class="product-info">
 
-<p>
-Natural honey product for everyday
-food and beverage use.
-</p>
+            <h3>Pickle</h3>
 
-</div>
+            <p>
+                Quality food product.
+            </p>
 
-</div>
+        </div>
 
+    </div>
 
 
-<!-- HONEY NUTS -->
+    <div class="product">
 
-<div class="product-card">
+        <img
+        src="images/other.jpg"
+        alt="Other Products">
 
-<div class="product-photo">
+        <div class="product-info">
 
-<img
-src="images/honey-nuts.jpg"
-alt="Honey Nuts">
+            <h3>Other</h3>
 
-</div>
+            <p>
+                More quality products.
+            </p>
 
-<div class="product-info">
+        </div>
 
-<span class="product-category">
-DRY FOOD
-</span>
-
-<h3>
-Honey Nuts
-</h3>
-
-<p>
-A delicious combination of nuts
-and honey flavour.
-</p>
-
-</div>
-
-</div>
-
-
-
-<!-- PICKLE -->
-
-<div class="product-card">
-
-<div class="product-photo">
-
-<img
-src="images/pickle.jpg"
-alt="Pickle">
-
-</div>
-
-<div class="product-info">
-
-<span class="product-category">
-FOOD
-</span>
-
-<h3>
-Pickle
-</h3>
-
-<p>
-Flavourful pickle products for
-everyday meals.
-</p>
-
-</div>
-
-</div>
-
-
-
-<!-- OTHER -->
-
-<div class="product-card">
-
-<div class="product-photo">
-
-<img
-src="images/other.jpg"
-alt="Other Products">
-
-</div>
-
-<div class="product-info">
-
-<span class="product-category">
-OTHER
-</span>
-
-<h3>
-Other Products
-</h3>
-
-<p>
-Explore our other available food
-and daily-use products.
-</p>
-
-</div>
-
-</div>
-
+    </div>
 
 </div>
 
 </div>
 
 </section>
-
 
 
 <!-- ================= CONTACT ================= -->
 
-<section
-class="contact"
-id="contact">
-
-<div class="container">
-
+<section class="contact" id="contact">
 
 <div class="contact-box">
 
-<h2>
-Contact Us
-</h2>
+    <h2>Contact SDF Private Limited</h2>
 
-<p>
-For product enquiries, business enquiries
-or general information, feel free to contact us.
-</p>
+    <div class="contact-item">
+        📧
+        <a href="mailto:privatelimitedsdf@gmail.com">
+            privatelimitedsdf@gmail.com
+        </a>
+    </div>
 
+    <div class="contact-item">
+        🌐
+        <a href="https://sdfprivatelimited.com" target="_blank">
+            sdfprivatelimited.com
+        </a>
+    </div>
 
-<div class="contact-items">
-
-
-<div class="contact-item">
-
-<div class="contact-icon">
-📧
-</div>
-
-<h4>
-EMAIL
-</h4>
-
-<a href="mailto:privatelimitedsdf@gmail.com">
-privatelimitedsdf@gmail.com
-</a>
-
-</div>
+    <div class="contact-item">
+        📍 Baruipur • Magrahat • Sangrampur
+    </div>
 
 
+    <div class="social">
 
-<div class="contact-item">
+        <a href="#" target="_blank">
+            Instagram
+        </a>
 
-<div class="contact-icon">
-🌐
-</div>
+        <a href="#" target="_blank">
+            Facebook
+        </a>
 
-<h4>
-WEBSITE
-</h4>
+        <a href="#" target="_blank">
+            YouTube
+        </a>
 
-<a
-href="https://sdfprivatelimited.com"
-target="_blank">
-
-sdfprivatelimited.com
-
-</a>
-
-</div>
-
-
-
-<div class="contact-item">
-
-<div class="contact-icon">
-📞
-</div>
-
-<h4>
-BUSINESS ENQUIRY
-</h4>
-
-<span>
-Contact us for details
-</span>
-
-</div>
-
-
-</div>
-
-</div>
+    </div>
 
 </div>
 
 </section>
-
-
-
-<!-- ================= SOCIAL ================= -->
-
-<section class="social-section">
-
-<h2>
-Connect With Us
-</h2>
-
-<p>
-Follow SDF Private Limited on social media.
-</p>
-
-
-<div class="social-buttons">
-
-<a
-class="social-btn"
-href="#">
-
-Instagram
-
-</a>
-
-
-<a
-class="social-btn"
-href="#">
-
-Facebook
-
-</a>
-
-
-<a
-class="social-btn"
-href="#">
-
-YouTube
-
-</a>
-
-</div>
-
-</section>
-
-
-</main>
-
 
 
 <!-- ================= FOOTER ================= -->
 
 <footer>
 
-<div class="footer-content">
-
-
-<div class="footer-brand">
-
-<h2>
-SDF PRIVATE LIMITED
-</h2>
-
-<p>
-Quality • Trust • Growth
-</p>
-
-</div>
-
-
-<div class="footer-right">
-
-Building a better business
-step by step.
-
-</div>
-
-
-</div>
-
-
-<div class="footer-bottom">
-
-© 2026 SDF Private Limited.
-All Rights Reserved.
-
-</div>
+    © 2026
+    <strong>SDF Private Limited</strong>.
+    All Rights Reserved.
 
 </footer>
 
 
+<!-- ================= JAVASCRIPT ================= -->
 
 <script>
 
-
-/* ================= MOBILE MENU ================= */
-
-function toggleMenu(){
-
-    document
-    .getElementById("navLinks")
-    .classList
-    .toggle("show");
-
-}
-
-
-document
-.querySelectorAll(".nav-links a")
-.forEach(function(link){
-
-    link.addEventListener(
-        "click",
-        function(){
-
-            document
-            .getElementById("navLinks")
-            .classList
-            .remove("show");
-
-        }
-    );
-
-});
-
-
-
-/* ================= SLIDER ================= */
+const slides = document.getElementById("slides");
+const dots = document.querySelectorAll(".dot");
 
 let currentSlide = 0;
 
-const slides =
-document.querySelectorAll(".slide");
-
-const dots =
-document.querySelectorAll(".dot");
-
-
 function showSlide(index){
 
-    if(index >= slides.length){
-        currentSlide = 0;
+    if(index < 0){
+        index = 4;
     }
 
-    else if(index < 0){
-        currentSlide = slides.length - 1;
+    if(index > 4){
+        index = 0;
     }
 
-    else{
-        currentSlide = index;
-    }
+    currentSlide = index;
 
+    slides.style.transform =
+        `translateX(-${currentSlide * 100}%)`;
 
-    slides.forEach(function(slide){
+    dots.forEach((dot,i)=>{
 
-        slide.classList.remove("active");
+        dot.classList.toggle(
+            "active",
+            i === currentSlide
+        );
 
     });
-
-
-    dots.forEach(function(dot){
-
-        dot.classList.remove("active");
-
-    });
-
-
-    slides[currentSlide]
-    .classList
-    .add("active");
-
-
-    dots[currentSlide]
-    .classList
-    .add("active");
 
 }
 
 
-function changeSlide(direction){
+function nextSlide(){
 
-    showSlide(
-        currentSlide + direction
-    );
+    showSlide(currentSlide + 1);
 
 }
 
 
-function goToSlide(index){
+function prevSlide(){
+
+    showSlide(currentSlide - 1);
+
+}
+
+
+function goSlide(index){
 
     showSlide(index);
 
 }
 
 
-/* AUTO SLIDE EVERY 5 SECONDS */
+/* Auto Slide */
 
-let autoSlide =
-setInterval(function(){
+setInterval(()=>{
 
-    changeSlide(1);
+    nextSlide();
 
 },5000);
 
 
-/* PAUSE WHEN MOUSE IS ON BANNER */
+/* Mobile Menu */
 
-const slider =
-document.getElementById("slider");
+function toggleMenu(){
 
+    document
+    .getElementById("navMenu")
+    .classList.toggle("show");
 
-slider.addEventListener(
-"mouseenter",
-function(){
-
-    clearInterval(autoSlide);
-
-});
+}
 
 
-slider.addEventListener(
-"mouseleave",
-function(){
-
-    autoSlide =
-    setInterval(function(){
-
-        changeSlide(1);
-
-    },5000);
-
-});
-
-
-/* TOUCH/SWIPE SUPPORT */
+/* Touch Swipe */
 
 let touchStartX = 0;
 
-let touchEndX = 0;
+const slider =
+document.querySelector(".slider");
+
+slider.addEventListener(
+    "touchstart",
+    function(e){
+
+        touchStartX =
+        e.changedTouches[0].screenX;
+
+    }
+);
 
 
 slider.addEventListener(
-"touchstart",
-function(e){
+    "touchend",
+    function(e){
 
-    touchStartX =
-    e.changedTouches[0].screenX;
+        let touchEndX =
+        e.changedTouches[0].screenX;
 
-});
+        if(touchEndX < touchStartX - 50){
+            nextSlide();
+        }
 
-
-slider.addEventListener(
-"touchend",
-function(e){
-
-    touchEndX =
-    e.changedTouches[0].screenX;
-
-    if(touchEndX < touchStartX - 50){
-
-        changeSlide(1);
+        if(touchEndX > touchStartX + 50){
+            prevSlide();
+        }
 
     }
-
-    if(touchEndX > touchStartX + 50){
-
-        changeSlide(-1);
-
-    }
-
-});
-
+);
 
 </script>
 
-
 </body>
 </html>
-```
